@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VALCRI - DExDs for Statistical Process Control</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style/spc.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/spcmap.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/tufte.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/dexd.css" type="text/css"></link>
+
+	<script type="text/javascript" src="lib/d3_4_5_0.min.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/spc.js"></script>
+
+</head>
+<body>
+	<div class="loading">Loading ...</div>
+
+	<h2>Summarising Processes Geographically</h2>
+
+	<p><a href="index.html">Click here to go home</a></p>
+
+	<p>So far, we have looked at signals, but information regarding the processes themselves can affect how we should interpret the signal.
+		For example, areas of low crime can be more susceptible to false signals, whereas signals in high-crime areas may require more attention.
+		By displaying process information, we can show the number of processes in the data, as well as the variability.</p>
+		<p>Below, each tile on our map contains a mini-SPC chart showing only the processes as rectangles, centred on the mean, and with the height of the rectangle sized by the control limits.
+		This allows us to see the number of processes and amount of variability within a neighbourhood.
+		It does not, however, allow us to make any comparisons between neighbourhoods.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing the number of processes per neighbourhood and their variation.<br/>
+			Each neighbourhood is scaled independently to show local variation - local scaling.<br/>
+			Click on a neighbourhood to see its SPC chart.
+			<div class="spcProcessesLocalMeta"></div>
+			<div class="spcProcessesLocal sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcProcessesLocal container geo" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<p>We can further enhance this design by adding information and an encoding to show the mean of the processes. A vertical line between processes emphasizes the change.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing the number of processes per neighbourhood, the mean is also displayed.<br/>
+			Each neighbourhood is scaled independently to show local variation - local scaling.<br/>
+			Click on a neighbourhood to see its SPC chart.
+			<div class="spcProcessesLocalMeanMeta"></div>
+			<div class="spcProcessesLocalMean sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcProcessesLocalMean container geo" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<p>To enable us to compare processes across neighbourhoods, we can use a global measure of variance.
+	So now we can show how much variation exists between the control limits and the mean.
+	The disadvantage of this approach is that it places greater emphasis on neighbourhoods with low crime levels.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing the number of processes per neighbourhood.</br>
+			Each neighbourhood is scaled consistently to allow us to compare variation - global scaling for comparison.<br/>
+			Click on a neighbourhood to see its SPC chart.
+			<div class="spcProcessesGlobalVarMeta"></div>
+			<div class="spcProcessesGlobalVar sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcProcessesGlobalVar container geo" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<p>Another way in which we can make comparisons between neighbourhoods is to set each mini-SPC chart to have the same minimum and maximum values on the y-axis.
+	Not only can we now compare the amount of variability between neighbourhoods, we can also see the amount of crime a neighbourhood has compared to its neighbours.
+	In contrast to the visualisation above, this method now places greater emphasis on neighbourhoods with high crime.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing the number of processes per neighbourhood.</br>
+			Each neighbourhood uses a common vertical axis so that we can compare the number of crimes reported - global scaling for comparison.<br/>
+			Click on a neighbourhood to see its SPC chart.
+			<div class="spcProcessesGlobalMeta"></div>
+			<div class="spcProcessesGlobal sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcProcessesGlobal container geo" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<p>Finally, rather than showing crime frequency, we can show crime rates based on neighbourhood population.  However, this places vgreat emphasis on city centres, where resident population counts are low but daytime populartion is high and so are crime levels. Therefore, without daytime and nighttime population data, crime frequency may be a more informative measure to visualise.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing the number of processes per neighbourhood (based on crime rate) with the vertical axis consistent across all SPC charts.<br/>
+			We exclude the NEC and airport from the analysis.<br/>
+			Click on a neighbourhood to see its SPC chart.
+			<div class="spcProcessesCrimeRateMeta"></div>
+			<div class="spcProcessesCrimeRate sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcProcessesCrimeRate container geo" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<p>Now that we have established that we're going to look at crime frequency with a global y-axis, we can think about reintroducing NPU boundary data.
+	One approach is to colour each process by its NPU, this way we can even remove the background and leave a faint outline.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing the number of processes per neighbourhood with the y-axis globally aligned, coloured by NPU.<br/>
+			Click on a neighbourhood to see its SPC chart.
+			<div class="spcProcessesNoBackground"></div>
+			<div class="spcProcessesNoBackground sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcProcessesNoBackground container geo" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<p>The issue with the above approach is that it reinforces 'artificial' NPU boundaries, such that if a spatial association exists between neighbourhoods, the colour may inhibit its detection if it occurs across multiple NPUs.
+	To mitigate this issue, we faintly colour the background by NPU.
+	Using this method, the processes still dominate the attention, but the NPU colouring acts as a passive indicator.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing the number of processes per neighbourhood with the y-axis globally aligned, and with a background colour representing NPU.<br/>  Click on a neighbourhood to see its SPC chart.
+			<div class="spcProcessesNPUBackground"></div>
+			<div class="spcProcessesNPUBackground sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcProcessesNPUBackground container geo" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<p class="question">
+		Which of these two charts enables you to identify clusters of neighbourhoods in which processes are varying meanigfully in either consistent or inconsistent ways?<br/>
+		Which enables you to do so while considering the NPUs?
+	</p>
+
+
+		<p><hr/></p>
+
+		<p>This concludes our investigation into
+			<a href="processes.html">Summarising Processes Geographically</a>.</p>
+
+		<p>Our next step is to combine the signal and process information to create a rich overview for each neighbourhood <a href="overloading.html">Combining Multiple Representations</a>.</p>
+
+		<p><hr/></p>
+
+		<script>
+
+		var dataFile = "data/derived_data_2016.csv";
+		var smwgFile = "data/west-mids-smwg.csv";
+		var properties = {};
+		var data;
+		var crimeRateData;
+		var tooltip;
+		var mainProperties = {"autoDetectProcesses" : false};
+
+		var mapList = ["geoSpcColourOnly", "geoSpcIcons", "geoSpcGlyphs"];
+
+		var minDate = d3v45.timeParse("%m-%Y")("08-2011");
+		var month = 11;//11;
+		var year = 2016;//2012;
+		var today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+		var autoDetectCap = today;
+
+		var mapData;
+		var selected = "";
+
+		var npuColours;
+
+		moveTodayBackward = function() {
+			if (today > minDate) {
+				if (month > 1) {
+					month--;
+				} else {
+					month = 12;
+					year--;
+				}
+				recalculateSPC();
+			}
+		}
+
+		moveTodayForward = function() {
+			if (month < 12) {
+				month++;
+			} else {
+				month = 1;
+				year++;
+			}
+			recalculateSPC();
+		}
+
+		recalculateSPC = function() {
+			d3v45.selectAll(".geoSpcColourOnly").each( function(d,i) {
+				d3v45.select(this).selectAll(".las").classed("spc__underSignal_fill", false);
+			});
+			d3v45.selectAll(".geoSpcColourOnly").each( function(d,i) {
+				d3v45.select(this).selectAll(".las").classed("spc__overSignal_fill", false);
+			});
+			d3v45.select(".loading").classed("hidden", false);
+			today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+			d3v45.selectAll(".displayToday").html(displayToday());
+			initSPC();
+		}
+
+		displayToday = function() {
+			let s = "th";
+			if (d3v45.timeFormat("%_d")(today) == 1) {
+				s = "st";
+			} else if (d3v45.timeFormat("%_d")(today) == 2) {
+				s = "nd";
+			} if (d3v45.timeFormat("%_d")(today) == 3) {
+				s = "rd";
+			}
+			return d3v45.timeFormat("%_d" + s + " %b %Y")(today);
+		}
+
+		displayMeta = function(container, n) {
+			d3v45.select("." + container).html(n.Neighbourh + ", " + n.NPU + "<br />Population: " + n.pop2011);
+		}
+
+		getMapListWithoutMe = function(me) {
+			var tmpMapList = [];
+			for (let i of mapList) {
+				if (!(me == i)) {
+					tmpMapList.push(i);
+				}
+			}
+			return tmpMapList;
+		}
+
+		loadSPC = function (container) {
+			return function(d) {
+				selected = d;
+				for (let row of data) {
+					if (row.key == d) {
+						displayChart(row.values, "." + container, properties[d]);
+						for (let n of mapData) {
+							if (n.Neigh_code == row.key) {
+								displayMeta(container + "Meta", n);
+							}
+						}
+						break;
+					}
+				}
+			}
+		}
+
+		loadSPCCrimeRate = function (container) {
+			return function(d) {
+				selected = d;
+				for (let row of crimeRateData) {
+					if (row.key == d) {
+						displayChart(row.values, "." + container, properties["cr" + d]);
+						for (let n of mapData) {
+							if (n.Neigh_code == row.key) {
+								displayMeta(container + "Meta", n);
+							}
+						}
+						break;
+					}
+				}
+			}
+		}
+
+
+		window.onload = function() {
+			tooltip = spcmap.initalizeToolip('body');
+			initSMWG();
+			d3v45.selectAll(".displayToday").html(displayToday());
+		}
+
+		initSMWG = function() {
+
+
+
+			d3v45.csv(smwgFile, function(error, data) {
+				if (error)
+				throw error;
+
+				npuColours = d3v45.scaleOrdinal()
+				.domain(d3v45.map(data, function(d){return d.NPU;}).keys())
+				.range(["#EB4551","#22919E","#EBC24F","#FF7C40","#B2D100","#C04B69","#00BDA6","#28556E"]);
+
+				mapData = data;
+				spcmap.drawSMWG(data, "geoSpcProcessesLocal", {
+					"tooltip" : tooltip,
+					"linkedViews" : getMapListWithoutMe("geoSpcProcessesLocal"),
+					"callback" : loadSPC("spcProcessesLocal"),
+					"colourScale" : function(d) {return "#EEE"},
+					"colourAttribute" : "",
+					"offsetX" : 1,
+					"offsetY" : 0
+				});
+
+				spcmap.drawSMWG(data, "geoSpcProcessesLocalMean", {
+					"tooltip" : tooltip,
+					"linkedViews" : getMapListWithoutMe("geoSpcProcessesLocalMean"),
+					"callback" : loadSPC("spcProcessesLocalMean"),
+					"colourScale" : function(d) {return "#EEE"},
+					"colourAttribute" : "",
+					"offsetX" : 1,
+					"offsetY" : 0
+				});
+
+				spcmap.drawSMWG(data, "geoSpcProcessesGlobalVar", {
+					"tooltip" : tooltip,
+					"linkedViews" : getMapListWithoutMe("geoSpcProcessesGlobalVar"),
+					"callback" : loadSPC("spcProcessesGlobalVar"),
+					"colourScale" : function(d) {return "#EEE"},
+					"colourAttribute" : "",
+					"offsetX" : 1,
+					"offsetY" : 0
+				});
+
+				mapData = data;
+				spcmap.drawSMWG(data, "geoSpcProcessesGlobal", {
+					"tooltip" : tooltip,
+					"linkedViews" : getMapListWithoutMe("geoSpcProcessesGlobal"),
+					"callback" : loadSPC("spcProcessesGlobal"),
+					"colourScale" : function(d) {return "#EEE"},
+					"colourAttribute" : "",
+					"offsetX" : 1,
+					"offsetY" : 0
+				});
+
+				mapData = data;
+				spcmap.drawSMWG(data, "geoSpcProcessesCrimeRate", {
+					"tooltip" : tooltip,
+					"linkedViews" : getMapListWithoutMe("geoSpcProcessesCrimeRate"),
+					"callback" : loadSPCCrimeRate("spcProcessesCrimeRate"),
+					"colourScale" : function(d) {return "#EEE"},
+					"colourAttribute" : "",
+					"offsetX" : 1,
+					"offsetY" : 0
+				});
+
+				mapData = data;
+				spcmap.drawSMWG(data, "geoSpcProcessesNPUBackground", {
+					"tooltip" : tooltip,
+					"linkedViews" : getMapListWithoutMe("geoSpcProcessesNPUBackground"),
+					"callback" : loadSPC("spcProcessesNPUBackground"),
+					"colourScale" : npuColours,
+					"colourAttribute" : "NPU",
+					"offsetX" : 1,
+					"offsetY" : 0,
+					"opacity" : 0.1
+				});
+				updateChartOpacity("geoSpcProcessesNPUBackground", 0.1)
+
+				spcmap.drawSMWG(data, "geoSpcProcessesNoBackground", {
+					"tooltip" : tooltip,
+					"linkedViews" : getMapListWithoutMe("geoSpcProcessesNoBackground"),
+					"callback" : loadSPC("spcProcessesNoBackground"),
+					"colourScale" : function(d) {return "#FFFFF8"},
+					"colourAttribute" : "NPU",
+					"offsetX" : 1,
+					"offsetY" : 0,
+					"strokeColour" : function(d) {return "#EEEEEE"}
+				});
+				initSPC();
+
+				//updateChartOpacity("geoSpcProcessesLocal", 0.1)
+				//updateChartOpacity("geoSpcProcessesGlobal", 0.1)
+				//updateChartOpacity("geoSpcProcessesGlobalVar", 0.1)
+				//updateChartOpacity("geoSpcProcessesCrimeRate", 0.1)
+
+
+			});
+
+		}
+
+		initSPC = function() {
+			console.log("init");
+			d3v45.csv(dataFile, function(d) {
+				d.Count = +d.Count;
+				return d;
+			}, function(error, theData) {
+				if (error) throw error;
+
+				data = d3v45.nest()
+				.key(function(d) { return d.neighbourhood; })
+				.key(function(d) { return d.Month; })
+				.rollup(function(v) {
+					return d3v45.sum(v, function(d) {
+						return d.Count;
+					})
+				})
+				.entries(theData);
+
+				var maxVal = 0;
+				var minVal = Number.MAX_SAFE_INTEGER;
+				var maxRatio = 0;
+				data.forEach(function(d) {
+
+
+					d.values.forEach( function (d) {
+						d.Date = spc.parseTime("%Y-%m")(d.key);
+						d.Count = +d.value;
+					});
+
+					d.values.sort(function(a,b) {return a.Date-b.Date;});
+
+
+					let i = 0;
+					while(d.values[i].Date <= today) {
+						i++;
+					}
+
+					d.values.splice(i, d.values.length);
+
+					var mean = d3v45.mean(d.values, function(d1) { return d1.Count});
+					var sd = d3v45.deviation(d.values, function(d1) { return d1.Count});
+					var ratio = sd / mean;
+					if (mean + 3 * sd > maxVal) {
+						maxVal = mean + 3 * sd;
+					}
+					if (mean - 3 * sd < minVal) {
+						minVal = mean - 3 * sd;
+					}
+					if (ratio > maxRatio) {
+						maxRatio = ratio;
+					}
+
+
+					spc.getSignals(d.values, properties[d.key] = {"autoDetectProcess" : true, "autoDetectUntil" : autoDetectCap});
+
+				});
+
+				data.forEach(function(d) {
+					var max = d3v45.max(properties[d.key].processes, function(d1) { return d1.mean + 3.5 * d1.sd});
+					var min = d3v45.min(properties[d.key].processes, function(d1) { return d1.mean - 3.5 * d1.sd});
+
+					var mean = d3v45.mean(d.values, function(d1) { return d1.Count});
+
+					spcmap.processesAsBackgroundShade("geoSpcProcessesLocal", d.key, properties[d.key], d.values, min, max, function() {return "#AAA"},"", 0, 0.3, "#FFFFFf", false);
+
+					spcmap.processesAsBackgroundShade("geoSpcProcessesLocalMean", d.key, properties[d.key], d.values, min, max, function() {return "#CCC"},"", 0, 0.3, "#FFFFFf", true);
+
+					spcmap.processesAsBackgroundShade("geoSpcProcessesGlobalVar", d.key, properties[d.key], d.values, mean - 3.5 * mean*maxRatio, mean + 3.5 * mean*maxRatio, function() {return "#CCC"},"", 0, 0.3, "#FFFFF8", true);
+
+					spcmap.processesAsBackgroundShade("geoSpcProcessesGlobal", d.key, properties[d.key], d.values, minVal, maxVal, function() {return "#CCC"},"", 0, 0.3, "#FFFFFf", true);
+
+					spcmap.processesAsBackgroundShade("geoSpcProcessesNoBackground", d.key, properties[d.key], d.values, minVal, maxVal, npuColours, d.key.substring(0,2), 0, 0.3, "#FFFFF8", false);
+					spcmap.processesAsBackgroundShade("geoSpcProcessesNPUBackground", d.key, properties[d.key], d.values, minVal, maxVal, function() {return "#AAA"},"", 0, 0.3, "#FFFFF8", false);
+					//	spcmap.addSignalsAsIcons("geoSpcProcessesNoBackground", d.key, properties[d.key], today);
+				});
+
+
+				/*
+				Bit of a hack here.  A repetition of code to allow us to look at both crime frequency and crime rate on the same page.
+				Ideally, need to fix the way SPC reads the attributes from the data array to something more dynamic.
+				*/
+				crimeRateData = JSON.parse(JSON.stringify(data));
+				maxVal = 0;
+				minVal = Number.MAX_SAFE_INTEGER;
+				crimeRateData.forEach(function(d) {
+
+					d.values.forEach( function (d) {
+						d.Date = spc.parseTime("%Y-%m")(d.key);
+						d.Count = +d.value;
+					});
+
+					for (let n of mapData) {
+						if (n.Neigh_code == d.key) {
+							for (let m of d.values) {
+								//console.log(m.Count + " " + n.pop2011);
+								if (n.pop2011 == 0) {
+									m.Count = 0;
+								} else {
+									m.Count = m.Count /  n.pop2011;
+								}
+							}
+						}
+					}
+					var mean = d3v45.mean(d.values, function(d1) { return d1.Count});
+					var sd = d3v45.deviation(d.values, function(d1) { return d1.Count});
+					//	console.log(mean);
+					if (mean + 3 * sd > maxVal) {
+						maxVal = mean + 3 * sd;
+					}
+					if (mean - 3 * sd < minVal) {
+						minVal = mean - 3 * sd;
+					}
+
+					spc.getSignals(d.values, properties["cr" + d.key] = {"autoDetectProcess" : true, "autoDetectUntil" : autoDetectCap});
+
+				});
+
+
+
+				crimeRateData.forEach(function(d) {
+					spcmap.processesAsBackgroundShade("geoSpcProcessesCrimeRate", d.key, properties["cr" + d.key], d.values, minVal, maxVal, function() {return "#AAA"},"", 0, 0.3, "#FFFFF8", false);
+				});
+
+				if (selected != "") {
+					loadSPC(selected);
+				}
+
+				console.log("finished");
+				d3v45.select(".loading").classed("hidden", true);
+			});
+		}
+
+
+		</script>
+	</body>
+	</html>

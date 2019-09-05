@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VALCRI - DExDs for Statistical Process Control</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style/spc.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/spcmap.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/tufte.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/dexd.css" type="text/css"></link>
+
+	<script type="text/javascript" src="lib/affinetransform.js"></script>
+	<script type="text/javascript" src="lib/nmap.min.js"></script>
+	<script type="text/javascript" src="lib/d3_4_5_0.min.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/spc.js"></script>
+	<script src="http://colorbrewer2.org/export/colorbrewer.js"></script>
+</head>
+<body>
+	<div class="loading">Loading ...</div>
+	<h1><img class="valcriImg" src="img/valcri.png" alt="VALCRI">
+		DExD for Statistical Process Control</h1>
+	<!--h2>Chris Rooney, Roger Beecham &amp; Jason Dykes</h2-->
+	<h2>Author Names Removed</h2>
+	<h3>
+		Version: <span class="version">08/2019</span>.
+		Last updated: 9th August 2019
+	</h3>
+
+	<p>
+		Table of Contents
+		<ol>
+			<li><a href="index.html">SPC Chart and Alternative Geographies</a></li>
+			<li><a href="geospc.html">Representing Signals Geographically</a></li>
+			<li><a href="processes.html">Summarising Processes Geographically</a></li>
+			<li><a href="overloading.html">Combining Multiple Representations</a></li>
+			<li><a href="facets.html">Comparing Multiple Maps</a></li>
+		</ol>
+	</p>
+
+  <h2>A Standard SPC chart and some alternative ways of mapping geography</h2>
+
+	<p>This Design Exposition Document is intended to explain some options for visualizing the crime data that we are focusing on and to give you a chance to try our ideas in your own workplace at your own pace and at a time that suits you.
+		We'd like you to try the designs out, interact with them and provide us with some feedback on their potential.</p>
+
+		<p>
+		We begin by describing the design process for furthering the work on statistical process control (SPC).
+	</p>
+	<p>
+		SPC is used to identify signals (both positive and negative) in data by comparing individual data points against the mean and variance of the whole data (or an individual process).
+		It is commonly used in policing and represented through an SPC chart such as this:</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A standard SPC chart.
+			This chart shows all crimes committed in the West Midlands, aggregated by month.<br/>
+			Select individual data points to treat them as outliers and remove them from the analysis.<br/>
+			Create process markers by clicking on the graph.<br/>
+			Click <input onclick="toggleAutoDetect()" class="button" type="button" value="this button"/> to toggle automatic process detection.
+		</span>
+		<div class="containerWrapperDeep" >
+			<div class="spcMain container" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<p>
+		Play a little with the graph.
+		Try removing some points.
+		Try clicking positions in the graph to split processes.
+		Consider the effects of these actions.
+	</p>
+	<p class="question">
+		Has this helped you think of the sensitivities of SPC analysis to the time periods selected and extreme events?<br/>
+		Record your thoughts.
+	</p>
+
+	<p>One way in which we can potentially expand SPC is by thinking about these processes and any signals that we detect in terms of their geography:
+		<br/>Where do they occur?
+		<br/>Do they cluster?
+		<br/>Do we have different types of signal and process in different places?
+	</p>
+	<p>
+	Here is a standard map of the West Midlands that might form the basis for this analysis.
+	Each region represents a neighbourhood for which monthly crime statistics are available.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A map of the West Midlands.
+			Hover over a neighbourhood to see additional information.
+		</span>
+		<div class="containerWrapperDeep" >
+			<div class="geoNoColour geo container" alt="A map of the West Midlands"></div>
+		</div>
+	</figure>
+
+	<p>Rather than simply shade the regions in a single colour, we could, for example, use a discrete colour scale to differentiate neighbourhoods based on the larger neighbourhood policing units (NPU) into which they fall.
+		This is known as a choropleth map.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A choropleth map of the West Midlands.<br/>
+			Individual neighbourhoods are coloured based on their NPU.<br/>
+			Hover over a neighbourhood to see additional information.
+			<div class="geoNPULegend legend"></div>
+		</span>
+		<div class="containerWrapperDeep" >
+			<div class="geoNPU geo container" alt="A choropleth map of the West Midlands"></div>
+		</div>
+	</figure>
+
+	<p>Another option is to colour each neighbourhood by a continuous value, such as population.
+		This emphasises the fact that small, densely populated regions lack visual salience (i.e., they occupy very little screen space).
+		Take, for example, <i>Bordesley Green</i>, which has a much higher population than <i>Meriden</i>, but takes up much less screen space.</p>
+
+  <p class="question">
+		Take time to find <i>Bordesley Green</i> and <i>Meriden</i>.<br/>
+		What are their respective populations?
+	</p>
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A choropleth map of the West Midlands.<br/>
+			Individual neighbourhoods are coloured based on their population.<br/>
+			<div class="geoPopulationLegend legend"></div>
+		</span>
+		<div class="containerWrapperDeep" >
+			<div class="geoPopulation geo container" alt="A choropleth map of the West Midlands"></div>
+		</div>
+	</figure>
+
+  <p>
+		To address our geographic questions we may want to know what SPC analysis and charts look like in each of our neighnbourhoods or NPUs. We may want to compare the SPC analysis for these areas in their geographic context - by adding information from the SPC analyis onto the map.
+		However, the problem we have is that the areas vary greatly in size, and are tiny in the densely populated areas.
+		It would be hard to fit the information onto the map without overlap that would make things very difficult to read and interpret.
+	</p>
+	<p>Another method of representing geography that aims to address this problem is through a space-filling tree map.
+		The aim of this visualisation is to maximise the use of the space available on the screen or page to show as much data as possible. But in doing so, the precise geographic positions are relaxed a little - places on our maps move to different positions on the screen to that we can see them more clearly in their approximate geographic positions.
+		As a result, the original geography is converted into an uneven grid.
+		Each cell still represents a neighbourhood, but now its <i>size</i> represents some desired characteristic - such as its population.
+		The algorithm behind the visualisation attempts to maintain the position of each neighbourhood according to its original geography. Although this is never perfect, as you can see from the visualisation below.
+		Since we are using size to represent population, we can again use colour to show NPU.</p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A space-filling tree map.
+			The size of each neighbourhood represents its population.
+			<div class="nmapNPULegend legend"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="nmap geo container" alt="A space filling map of the West Midlands"></div>
+		</div>
+	</figure>
+
+	<p>If we want to place summary visualisations inside each neighbourhood, then we might be best to size them equally. However, this once again changes the layout of the neighbourhood.</p>
+
+	<p class="question">
+	Try to find <i>Winson Green</i> and <i>Selly Oak</i>.<br/>
+	You can see from the highlighting that they have different locations in the maps below and above.
+  </p>
+
+	<figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A space-filling tree map, coloured by NPU and sized equally.
+			<div class="nmapNPUEqualLegend legend"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="nmapEqual geo container" alt="A space filling map of the West Midlands"></div>
+		</div>
+	</figure>
+
+	<p>An issue with the algorithm used above is that the neighbourhoods have different aspect ratios - rectangular shapes and orientations.
+		This could still present a problem if we attempt to place summary visualisation inside each neighbourhood in a consistent manner.
+		One option here it to switch to an algorithm that gives each neighbourhood an equal size and shape.
+		The algorithm used below does not fill the space (notice the gap in the top right corner), but it does create a <i>tile</i> of the same shape, size and aspect ratio for each reporting area.
+		We can call this a <i>Tile Map</i>.
+		It also does a better job of keeping the NPUs together.
+
+		<figure>
+			<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+			<span class="marginnote">
+				Tile Map representing the West Midland neighbourhoods, coloured by NPU.
+				<!--div>
+					Opacity: <input class="opacitySlider" type="range" min="0" max="1" value="1" step="0.01" oninput="showValue(this.value); spcmap.updateChartOpacity('smwg', this.value)"/>
+					<span class="opacityValue">1</span>
+				</div-->
+				<div class="smwgNoWhiteSpaceLegend legend"></div>
+			</span>
+			<div class="containerWrapper" >
+				<div class="smwgNoWhiteSpace geo container" alt="A Tile Map representing the West Midlands"></div>
+			</div>
+		</figure>
+
+		<p>As mentioned, the main disadvantage of this approach is that it can be difficult to identify the relationship between the location of the reporting areas on the grid layout and the original geography.
+		One way to address this is to not fill all the space, but rather leave gaps such that the grid arrangement more closely resembles the original geography. The problem with this solution is that the tiles themselves will be smaller, giving us less room to show information about the reporting areas.
+		Below is the gapped approach with colour representing NPU.
+		As you can see, the neighbourhoods are well aligned, and the overall layout more represents the original geography more closely with the gaps added. It is possible to configure the algorithm to further increase the accuracy of the neighbourhood positions, but this comes at the cost of size (i.e. more gaps and smaller, less salient, neighbourhoods).</p>
+
+		<p>As an aside, this type of colouring might be useful in the background of some other visualisation (such as icons representing a signal), so we've implemented a slider bar to control the opacity.</p>
+		<p class="question">How faint can you make the visualisation such that you can still determine the NPUs?</p>
+
+		<figure>
+			<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+			<span class="marginnote">
+				Tile Map representing the West Midland neighbourhoods, coloured by NPU.
+				<div>
+					Opacity: <input class="opacitySlider" type="range" min="0" max="1" value="1" step="0.01" oninput="showValue(this.value); spcmap.updateChartOpacity('smwg', this.value)"/>
+					<span class="opacityValue">1</span>
+				</div>
+				<div class="smwgNPULegend legend"></div>
+			</span>
+			<div class="containerWrapper" >
+				<div class="smwg geo container" alt="Tile Map with gaps representing the West Midlands"></div>
+			</div>
+		</figure>
+
+		<p>
+			Placing the three visualisation side-by-side allows us to make a direct comparison between the trade-offs we aree making between geography, salience and consistency of shape.
+			At this size, you can see the regions in the two left-most views are larger and easier to see than the tile map.
+			We've placed the original geography above for comparison.</p>
+
+		<figure>
+			<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+			<span class="marginnote">
+				The three types of geographic representations.
+				Hover over a neighbourhood in any of the maps to see where it resides in the other two.
+			</span>
+			<div class="containerWrapper reduced" >
+				<div class="geoNoColour geo container" alt="A choropleth map of the West Midlands"></div>
+			</div>
+			<div class="multiViewContainer" alt="The three types of geographic visualisation">
+				<div class="containerWrapper multiViewChild">
+					<div class="nmapSmallNoColour geo container"></div>
+				</div>
+				<div class="containerWrapper multiViewChild">
+					<div class="smwgNWSSmallNoColour geo container"></div>
+				</div>
+				<div class="containerWrapper multiViewChild">
+					<div class="smwgSmallNoColour geo container"></div>
+				</div>
+			</div>
+		</figure>
+
+		<p>If we colour by NPU again, we would argue that the tile map is the best regarding both clarity (seeing each neighbourhood easily), geographic familiarity (distance of the neighbourhood from its geographic position and its neighbours) and overall layout.</p>
+
+		<figure>
+			<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+			<span class="marginnote">
+				The three types of geographic representations, coloured by NPU.
+				Hover over a neighbourhood to see where it resides in the other two.
+				<div class="smallNPULegend legend"></div>
+			</span>
+			<div class="containerWrapper reduced" >
+				<div class="geoNPU geo container" alt="A choropleth map of the West Midlands"></div>
+			</div>
+			<div class="multiViewContainer" alt="The three types of geographic visualisation">
+				<div class="containerWrapper multiViewChild">
+					<div class="nmapSmallNPU geo container"></div>
+				</div>
+				<div class="containerWrapper multiViewChild">
+					<div class="smwgNWSSmallNPU geo container"></div>
+				</div>
+				<div class="containerWrapper multiViewChild">
+					<div class="smwgSmallNPU geo container"></div>
+				</div>
+			</div>
+		</figure>
+
+		<p>Finally, we can think about evenly-sized geography, but with a focus on NPUs.
+			Below is an arrangement of NPUs such that they are positioned in relation to the original geography.
+			Inside each NPU, we then arrange the neighbourhoods in naighboruhood tile maps using the same algorithm as above.
+			This means that each NPU more closely resembles its original geography, but the West Midlands as a whole does not.  The disadvantage of this is that is reinforces these 'soft' boundaries between neighbourhoods.  While one might report on a particular NPU, this does not mean that a spatial association does not exist in nearby neighbourhoods that are assigned to different NPUs.
+			Therefore, the continuous geographic representations of the West Midlands, such as the tile map, are likely to be preferable to the NPU-divided geography presented below even though they contain irregularities and disciontinuities as we have seen.</p>
+
+		<p>
+		  The NPU arrangement is ad-hoc and can be modified.
+		</p>
+			<p class="question">
+			Rearrange the NPUs below by dragging them around.<br/>
+			Can you find a different configuration that works well?<br/>
+			If so, please can you capture and send a screenshot of your arrangement?
+		</p>
+
+		<figure>
+			<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+			<span class="marginnote">
+				The West Midlands represented as Tile Maps,one for each  NPU.<br/>
+				Rearrange the NPU geography by clicking and dragging each to appropriate locations.
+				<div class="smwgSplitByNPULegend legend"></div>
+			</span>
+			<div class="containerWrapper" >
+				<div class="smwgNPU geo container" alt="A tile map with gaps representing the West Midlands"></div>
+			</div>
+		</figure>
+
+		<p>In summary, there is a case for partial geographic layouts as a means of presenting geographic summaries of neighbourhood data, even though they may be unfamiliar and lack geographic precision.
+			But we are interested to hear your views on this:</p>
+
+
+			<p class="question">
+			Does this step away from traditional representations work for you?<br/>
+			Of the two (space-filling tree map and tile map), which would you say you were most comfortable with?<br/>
+			Do you prefer the continuous geography used in the tile map, or the NPU-focused approach in which you rearranged the positions of the NPUs?
+		</p>
+
+
+				<p><hr/></p>
+
+			<p>
+				That's all on our introduction to <i>SPC Charts and Alternative Geographies</i>.
+			</p>
+			<p>
+				Next we'd like to think about how these maps
+				<!--(the gapped one in particular)-->
+				can be used in conjunction with SPC for
+			 <a href="geospc.html">Representing Signals Geographically</a>.
+		</p>
+
+				<p><hr></p>
+
+			<script>
+
+			var dataFile = "data/derived_data_2016.csv";
+			var geoFile = "data/west-mids-neighbourhoods.geojson";
+			var smwgNWSFile = "data/west-mids-smwg-no-whitespace.csv";
+			var smwgFile = "data/west-mids-smwg.csv";
+			var smwgNPUFile = "data/NPUs.csv";
+			var properties = {};
+			var data;
+			var tooltip;
+			var mainProperties = {"autoDetectProcesses" : false};
+
+			var mapList = ["geoNoColour", "geoNPU", "geoPopulation", "smwg", "nmap", "geoSmallNoColour", "nmapSmallNoColour", "smwgSmallNoColour", "geoSmallNPU", "nmapSmallNPU", "smwgSmallNPU", "smwgNWSSmallNPU", "smwgNWSSmallNoColour", "nmapEqual", "smwgNoWhiteSpace"];
+
+			var npuColours;
+			var popColours;
+
+			showValue = function(v) {
+				d3v45.select(".opacityValue").html(v);
+			}
+
+			getMapListWithoutMe = function(me) {
+				var tmpMapList = [];
+				for (let i of mapList) {
+					if (!(me == i)) {
+						tmpMapList.push(i);
+					}
+				}
+				return tmpMapList;
+			}
+
+			loadSPC = function (d) {
+				for (let row of data) {
+					if (row.key == d) {
+						displayChart(row.values, ".spc", properties[d]);
+						break;
+					}
+				}
+
+			}
+
+			window.onload = function() {
+				tooltip = spcmap.initalizeToolip('body');
+				d3v45.select(".version").html(spcmap.version());
+				initGeo(geoFile);
+			}
+
+			initGeo = function(dataFile) {
+				d3v45.json(dataFile, function(error, geo) {
+					if (error)
+					throw error;
+					npuColours = d3v45.scaleOrdinal()
+					.domain(d3v45.map(geo.features, function(d){return d.properties.NPU;}).keys())
+					.range(["#EB4551","#22919E","#EBC24F","#FF7C40","#B2D100","#C04B69","#00BDA6","#28556E"]);
+
+					popColours = d3v45.scaleLinear()
+					.domain(d3v45.extent(geo.features, function(d) { return +d.properties.pop2011}))
+					// .range(["#00BDA6","#EB4551"]);
+					.range(["#fef0d9","#990000"]);
+					// ColorBrewer
+//					.range(["#fef0d9","#fdd49e","#fdbb84","#fc8d59", "#ef6548", "#d7301f", "#990000"]);
+// 					.range(colorbrewer.YlGnBu[9]);
+
+					spcmap.drawGeo(geo, "geoNoColour", tooltip, getMapListWithoutMe("geoNoColour"), function(d) { return "#999";
+				}, "");
+
+				//	spcmap.drawGeo(geo, "geoSmallNoColour", tooltip, getMapListWithoutMe("geoNoColour"), function(d) { return "#999";
+				//}, "");
+
+				spcmap.drawLegend("geoNPULegend", "discreet", npuColours);
+				spcmap.drawLegend("nmapNPULegend", "discreet", npuColours);
+				spcmap.drawLegend("nmapNPUEqualLegend", "discreet", npuColours);
+				spcmap.drawLegend("smwgNPULegend", "discreet", npuColours);
+				spcmap.drawLegend("smwgNoWhiteSpaceLegend", "discreet", npuColours);
+				spcmap.drawLegend("smallNPULegend", "discreet", npuColours);
+				spcmap.drawLegend("smwgSplitByNPULegend", "discreet", npuColours);
+
+				spcmap.drawGeo(geo, "geoNPU", tooltip, getMapListWithoutMe("geoNPU"), npuColours, "NPU");
+				//spcmap.drawGeo(geo, "geoSmallNPU", tooltip, getMapListWithoutMe("geoNPU"), npuColours, "NPU");
+
+				spcmap.drawLegend("geoPopulationLegend", "continuous", popColours);
+
+				spcmap.drawGeo(geo, "geoPopulation", tooltip, getMapListWithoutMe("geoPopulation"), popColours, "pop2011");
+				initNMap(geo);
+			});
+		}
+
+		initNMap = function(geo) {
+			spcmap.drawNMap(geo, "nmap", tooltip, getMapListWithoutMe("nmap"), npuColours, "NPU", "pop2011");
+			spcmap.drawNMap(geo, "nmapEqual", tooltip, getMapListWithoutMe("nmapEqual"), npuColours, "NPU");
+			spcmap.drawNMap(geo, "nmapSmallNPU", tooltip, getMapListWithoutMe("nmapSmallNPU"), npuColours, "NPU");
+			spcmap.drawNMap(geo, "nmapSmallNoColour", tooltip, getMapListWithoutMe("nmapSmallNoColour"), function(d) { return "#999";
+		}, "");
+		initSMWG();
+	};
+
+	initSMWG = function() {
+		d3v45.csv(smwgNPUFile, function(error, data) {
+			if (error)
+			throw error;
+
+
+			var maxX = 0;
+			var maxY = 0;
+
+			data.forEach(function(d, i) {
+				d3v45.csv("data/" + d.NPU_code + "_smwg.csv", function(error, d1) {
+					if (error)
+					throw error;
+					var x = 1 + d3v45.max(d1, function(d) { return +d.gridX}) -
+					d3v45.min(d1, function(d) { return +d.gridX}) ;
+					var y = 1 + d3v45.max(d1, function(d) { return +d.gridY}) -
+					d3v45.min(d1, function(d) { return +d.gridY});
+					if (x > maxX) {
+						maxX = x;
+					}
+					if (y > maxY) {
+						maxY = y;
+					}
+
+
+					if (i == data.length - 1) {
+
+						spcmap.drawSMWG(data, "smwgNPU", {
+							"tooltip" : tooltip,
+							"linkedViews" : getMapListWithoutMe("smwgNPU"),
+							"loadSPC" : loadSPC,
+							"colourScale" : function(d) { return "rgba(255,255,255,0)";},
+							"offsetX" : 1,
+							"offsetY" : 1,
+							"strokeColour" : function(d) { return "rgba(255,255,255,0)";},
+							"movable" : true,
+							"snapX" : maxX,
+							"snapY" : maxY
+						});
+
+
+
+						data.forEach(function(d) {
+
+							d3v45.csv("data/" + d.NPU_code + "_smwg.csv", function(error, data) {
+								if (error)
+								throw error;
+								spcmap.drawSMWG(data, "smwgNPU_" + d.NPU_code, {
+									"tooltip" : tooltip,
+									"linkedViews" : getMapListWithoutMe("smwgNPU"),
+									"loadSPC" : loadSPC,
+									"colourScale" : npuColours,
+									"colourAttribute" : "NPU",
+									"gridX" : maxX,
+									"gridY" : maxY
+								});
+							});
+
+						})
+
+					}
+				});
+			});
+		});
+
+		d3v45.csv(smwgFile, function(error, data) {
+			if (error)
+			throw error;
+			spcmap.drawSMWG(data, "smwg", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("smwg"),
+				"loadSPC" : loadSPC,
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			spcmap.drawSMWG(data, "smwgSmallNPU", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("smwgSmallNPU"),
+				"loadSPC" : loadSPC,
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+			spcmap.drawSMWG(data, "smwgSmallNoColour", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("smwgSmallNoColour"),
+				"loadSPC" : loadSPC,
+				"colourScale" : function(d) { return "#999";},
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			initSPC();
+		});
+
+		d3v45.csv(smwgNWSFile, function(error, data) {
+			if (error)
+			throw error;
+			spcmap.drawSMWG(data, "smwgNoWhiteSpace", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("smwgNoWhiteSpace"),
+				"loadSPC" : loadSPC,
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			spcmap.drawSMWG(data, "smwgNWSSmallNPU", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("smwgNWSSmallNPU"),
+				"loadSPC" : loadSPC,
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+			spcmap.drawSMWG(data, "smwgNWSSmallNoColour", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("smwgNWSSmallNoColour"),
+				"loadSPC" : loadSPC,
+				"colourScale" : function(d) { return "#999";},
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+		});
+
+	}
+
+	initSPC = function() {
+		console.log("init");
+		d3v45.csv(dataFile, function(d) {
+			d.Count = +d.Count;
+			return d;
+		}, function(error, theData) {
+			if (error) throw error;
+
+			/*
+			* Create a single SPC chart
+			*/
+			fullAgg = d3v45.nest()
+			.key(function(d) { return d.Month; })
+			.rollup(function(v) {
+				var c = 0;
+				v.forEach(function(d) {
+					c += d.Count;
+				})
+				return c;
+			})
+			.entries(theData);
+
+			fullAgg.forEach(function(d) {
+				d.Date = spc.parseTime("%Y-%m")(d.key);
+				d.Count = +d.value;
+			});
+
+			spc.displayChart(fullAgg, ".spcMain", mainProperties);
+
+			console.log("finished");
+			d3v45.select(".loading").classed("hidden", true);
+		});
+	}
+
+	toggleAutoDetect = function () {
+		mainProperties.autoDetectProcess = !mainProperties.autoDetectProcess;
+		spc.displayChart(fullAgg, ".spcMain", mainProperties);
+	}
+
+
+	</script>
+</body>
+</html>

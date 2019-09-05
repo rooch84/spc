@@ -1,0 +1,175 @@
+"","region","gridX","gridY","Neigh_code","Neighbourh","Sector","Sector_cod","NPU","NPU_code","LA","pop2011","HH2011","lon","lat"
+"1","BEDA",16,5,"BEDA","Erdington","Erdington","BESD","Birmingham East","BE","Birmingham","22894","10272",-1.835631,52.528781
+"2","BEDB",14,4,"BEDB","Kingstanding","Erdington","BESD","Birmingham East","BE","Birmingham","25480","10183",-1.870648,52.542689
+"3","BEDC",15,5,"BEDC","Stockland Green","Erdington","BESD","Birmingham East","BE","Birmingham","24495","10389",-1.857955,52.521398
+"4","BEDD",17,6,"BEDD","Tyburn","Erdington","BESD","Birmingham East","BE","Birmingham","25002","10202",-1.810553,52.516165
+"5","BEEA",16,10,"BEEA","Hall Green","Hall Green","BESE","Birmingham East","BE","Birmingham","26106","9402",-1.844972,52.427096
+"6","BEEB",14,9,"BEEB","Moseley and Kings Heath","Hall Green","BESE","Birmingham East","BE","Birmingham","25916","11113",-1.890995,52.441446
+"7","BEEC",15,9,"BEEC","Sparkbrook","Hall Green","BESE","Birmingham East","BE","Birmingham","32166","9233",-1.880745,52.460187
+"8","BEED",16,9,"BEED","Springfield","Hall Green","BESE","Birmingham East","BE","Birmingham","31283","9211",-1.859955,52.444235
+"9","BEFA",16,8,"BEFA","Bordesley Green","Hodge Hill","BESF","Birmingham East","BE","Birmingham","34108","9295",-1.837045,52.475553
+"10","BEFB",17,7,"BEFB","Hodge Hill","Hodge Hill","BESF","Birmingham East","BE","Birmingham","27652","9548",-1.817919,52.499588
+"11","BEFC",20,8,"BEFC","Shard End","Hodge Hill","BESF","Birmingham East","BE","Birmingham","26686","11555",-1.775379,52.488465
+"12","BEFD",16,6,"BEFD","Washwood Heath","Hodge Hill","BESF","Birmingham East","BE","Birmingham","33268","9091",-1.844185,52.489686
+"13","BEGA",15,3,"BEGA","Sutton Four Oaks","Sutton Coldfield","BESG","Birmingham East","BE","Birmingham","23970","10134",-1.8407,52.583527
+"14","BEGB",17,5,"BEGB","Sutton New Hall","Sutton Coldfield","BESG","Birmingham East","BE","Birmingham","22011","9272",-1.780078,52.538652
+"15","BEGC",16,4,"BEGC","Sutton Trinity","Sutton Coldfield","BESG","Birmingham East","BE","Birmingham","25561","10771",-1.803743,52.569625
+"16","BEGD",15,4,"BEGD","Sutton Vesey","Sutton Coldfield","BESG","Birmingham East","BE","Birmingham","23349","9621",-1.848468,52.551407
+"17","BEHA",17,9,"BEHA","Acocks Green","Yardley","BESH","Birmingham East","BE","Birmingham","29056","11318",-1.826534,52.443755
+"18","BEHB",19,8,"BEHB","Sheldon","Yardley","BESH","Birmingham East","BE","Birmingham","21530","9091",-1.778275,52.461779
+"19","BEHC",17,8,"BEHC","South Yardley","Yardley","BESH","Birmingham East","BE","Birmingham","29912","11023",-1.828558,52.462043
+"20","BEHD",18,7,"BEHD","Stechford and Yardley North","Yardley","BESH","Birmingham East","BE","Birmingham","26119","10013",-1.799919,52.478277
+"21","BWFA",14,7,"BWFA","Birmingham City Centre","Birmingham City Centre","BWSF","Birmingham West","BW","Birmingham","2326","1368",-1.89782,52.480739
+"22","BWFB",15,7,"BWFB","Eastside","Birmingham City Centre","BWSF","Birmingham West","BW","Birmingham","3296","612",-1.884499,52.480184
+"23","BWFC",14,8,"BWFC","Southside","Birmingham City Centre","BWSF","Birmingham West","BW","Birmingham","1740","1047",-1.895845,52.473767
+"24","BWFD",13,8,"BWFD","Westside","Birmingham City Centre","BWSF","Birmingham West","BW","Birmingham","2210","1342",-1.911164,52.476975
+"25","BWGA",9,9,"BWGA","Bartley Green","Edgbaston","BWSG","Birmingham West","BW","Birmingham","25046","10757",-1.993501,52.435342
+"26","BWGB",12,8,"BWGB","Edgbaston","Edgbaston","BWSG","Birmingham West","BW","Birmingham","24510","9110",-1.927303,52.4615
+"27","BWGC",11,8,"BWGC","Harborne","Edgbaston","BWSG","Birmingham West","BW","Birmingham","23216","10048",-1.958945,52.461025
+"28","BWGD",10,9,"BWGD","Quinton","Edgbaston","BWSG","Birmingham West","BW","Birmingham","24079","9979",-1.988424,52.457849
+"29","BWHA",14,6,"BWHA","Aston","Ladywood East","BWSH","Birmingham West","BW","Birmingham","32003","9579",-1.896557,52.50034
+"30","BWHB",15,8,"BWHB","Highgate","Ladywood East","BWSH","Birmingham West","BW","Birmingham","5103","2185",-1.888667,52.468929
+"31","BWHC",15,6,"BWHC","Nechells","Ladywood East","BWSH","Birmingham West","BW","Birmingham","10689","4147",-1.869917,52.497283
+"32","BWHD",16,7,"BWHD","Small Heath","Ladywood East","BWSH","Birmingham West","BW","Birmingham","13415","4401",-1.863394,52.475556
+"33","BWJA",13,6,"BWJA","Jewellery Quarter","Ladywood West","BWSJ","Birmingham West","BW","Birmingham","7154","4073",-1.911693,52.485154
+"34","BWJB",13,7,"BWJB","Ladywood","Ladywood West","BWSJ","Birmingham West","BW","Birmingham","18505","8737",-1.930119,52.479507
+"35","BWJC",12,6,"BWJC","Soho Road","Ladywood West","BWSJ","Birmingham West","BW","Birmingham","12978","4541",-1.937656,52.500803
+"36","BWJD",12,7,"BWJD","Winson Green","Ladywood West","BWSJ","Birmingham West","BW","Birmingham","17233","5721",-1.936995,52.488746
+"37","BWKA",13,10,"BWKA","Kings Norton","Northfield","BWSK","Birmingham West","BW","Birmingham","24226","10216",-1.935912,52.40273
+"38","BWKB",8,10,"BWKB","Longbridge","Northfield","BWSK","Birmingham West","BW","Birmingham","25128","10664",-2.001147,52.398041
+"39","BWKC",12,10,"BWKC","Northfield","Northfield","BWSK","Birmingham West","BW","Birmingham","26025","11521",-1.967304,52.403094
+"40","BWKD",11,9,"BWKD","Weoley","Northfield","BWSK","Birmingham West","BW","Birmingham","25573","10635",-1.968555,52.427108
+"41","BWLA",12,5,"BWLA","Handsworth Wood","Perry Barr","BWSL","Birmingham West","BW","Birmingham","27642","9223",-1.940813,52.520024
+"42","BWLB",13,5,"BWLB","Lozells and East Handsworth","Perry Barr","BWSL","Birmingham West","BW","Birmingham","31511","9714",-1.917869,52.507554
+"43","BWLC",13,4,"BWLC","Oscott","Perry Barr","BWSL","Birmingham West","BW","Birmingham","24833","10334",-1.894444,52.542608
+"44","BWLD",14,5,"BWLD","Perry Barr","Perry Barr","BWSL","Birmingham West","BW","Birmingham","23750","8823",-1.902475,52.526068
+"45","BWMA",15,10,"BWMA","Billesley","Selly Oak","BWSM","Birmingham West","BW","Birmingham","26429","10702",-1.871596,52.417009
+"46","BWMB",12,9,"BWMB","Bournville","Selly Oak","BWSM","Birmingham West","BW","Birmingham","26053","11296",-1.933664,52.424627
+"47","BWMC",14,10,"BWMC","Brandwood","Selly Oak","BWSM","Birmingham West","BW","Birmingham","25802","10977",-1.89981,52.4162
+"48","BWMD",13,9,"BWMD","Selly Oak","Selly Oak","BWSM","Birmingham West","BW","Birmingham","25999","8241",-1.931446,52.440875
+"49","CVGA",25,9,"CVGA","St Michael's","Coventry City Centre","CVSG","Coventry","CV","Coventry","27987","10665",-1.504861,52.407917
+"50","CVHA",25,7,"CVHA","Foleshill","Coventry North East","CVSH","Coventry","CV","Coventry","19943","6940",-1.497472,52.42831
+"51","CVHB",27,8,"CVHB","Henley","Coventry North East","CVSH","Coventry","CV","Coventry","18317","7648",-1.448959,52.433882
+"52","CVHC",26,7,"CVHC","Longford","Coventry North East","CVSH","Coventry","CV","Coventry","18292","7844",-1.478752,52.446251
+"53","CVHD",26,9,"CVHD","Lower Stoke","Coventry North East","CVSH","Coventry","CV","Coventry","18361","7205",-1.473746,52.404406
+"54","CVHE",26,8,"CVHE","Upper Stoke","Coventry North East","CVSH","Coventry","CV","Coventry","18464","7571",-1.477092,52.420319
+"55","CVHF",27,9,"CVHF","Wyken","Coventry North East","CVSH","Coventry","CV","Coventry","16953","6881",-1.448566,52.412579
+"56","CVJA",23,7,"CVJA","Bablake","Coventry South and North West","CVSJ","Coventry","CV","Coventry","15755","6535",-1.56524,52.439354
+"57","CVJB",26,10,"CVJB","Binley and Willenhall","Coventry South and North West","CVSJ","Coventry","CV","Coventry","16874","7495",-1.45704,52.391762
+"58","CVJC",25,10,"CVJC","Cheylesmore","Coventry South and North West","CVSJ","Coventry","CV","Coventry","15977","7191",-1.492137,52.387227
+"59","CVJD",24,9,"CVJD","Earlsdon","Coventry South and North West","CVSJ","Coventry","CV","Coventry","15371","6351",-1.532004,52.393917
+"60","CVJE",24,7,"CVJE","Holbrook","Coventry South and North West","CVSJ","Coventry","CV","Coventry","17080","6637",-1.513487,52.443526
+"61","CVJF",25,8,"CVJF","Radford","Coventry South and North West","CVSJ","Coventry","CV","Coventry","18799","7766",-1.517413,52.424351
+"62","CVJG",24,8,"CVJG","Sherbourne","Coventry South and North West","CVSJ","Coventry","CV","Coventry","12988","5319",-1.539205,52.417576
+"63","CVJH",24,10,"CVJH","Wainbody","Coventry South and North West","CVSJ","Coventry","CV","Coventry","14910","4668",-1.542004,52.379917
+"64","CVJJ",23,10,"CVJJ","Westwood","Coventry South and North West","CVSJ","Coventry","CV","Coventry","18198","7255",-1.579306,52.396183
+"65","CVJK",23,9,"CVJK","Whoberley","Coventry South and North West","CVSJ","Coventry","CV","Coventry","15875","7022",-1.54954,52.410874
+"66","CVJL",23,8,"CVJL","Woodlands","Coventry South and North West","CVSJ","Coventry","CV","Coventry","16815","7599",-1.583602,52.412196
+"67","DYGA",7,8,"DYGA","Belle Vale","Dudley East","DYSG","Dudley","DY","Dudley","13535","5842",-2.061153,52.455168
+"68","DYGB",6,5,"DYGB","Castle and Priory","Dudley East","DYSG","Dudley","DY","Dudley","14750","5511",-2.090149,52.520813
+"69","DYGC",6,4,"DYGC","Coseley East","Dudley East","DYSG","Dudley","DY","Dudley","12625","5267",-2.085214,52.543549
+"70","DYGD",6,8,"DYGD","Cradley and Wollescote","Dudley East","DYSG","Dudley","DY","Dudley","13122","5274",-2.097909,52.455422
+"71","DYGE",3,5,"DYGE","Gornal","Dudley East","DYSG","Dudley","DY","Dudley","13043","5731",-2.132291,52.520642
+"72","DYGF",8,8,"DYGF","Halesowen North","Dudley East","DYSG","Dudley","DY","Dudley","12252","5158",-2.032031,52.466733
+"73","DYGG",8,9,"DYGG","Halesowen South","Dudley East","DYSG","Dudley","DY","Dudley","12246","5134",-2.031285,52.44637
+"74","DYGH",7,9,"DYGH","Hayley Green and Cradley South","Dudley East","DYSG","Dudley","DY","Dudley","11792","4875",-2.076282,52.442975
+"75","DYGJ",5,6,"DYGJ","Netherton, Woodside and St Andrew's","Dudley East","DYSG","Dudley","DY","Dudley","14665","6041",-2.093121,52.492454
+"76","DYGK",5,7,"DYGK","Quarry Bank and Dudley Wood","Dudley East","DYSG","Dudley","DY","Dudley","13765","5501",-2.095612,52.476004
+"77","DYGL",4,5,"DYGL","Sedgley","Dudley East","DYSG","Dudley","DY","Dudley","11993","5043",-2.124442,52.544265
+"78","DYGM",4,6,"DYGM","St James's","Dudley East","DYSG","Dudley","DY","Dudley","13580","5874",-2.106028,52.509904
+"79","DYGN",6,6,"DYGN","St Thomas's","Dudley East","DYSG","Dudley","DY","Dudley","14453","5482",-2.0751,52.504356
+"80","DYGP",5,5,"DYGP","Upper Gornal and Woodsetton","Dudley East","DYSG","Dudley","DY","Dudley","13275","5436",-2.104986,52.532879
+"81","DYHA",3,7,"DYHA","Amblecote","Dudley West","DYSH","Dudley","DY","Dudley","13341","5406",-2.136803,52.468605
+"82","DYHB",4,7,"DYHB","Brierley Hill","Dudley West","DYSH","Dudley","DY","Dudley","14008","6112",-2.130302,52.479242
+"83","DYHC",3,6,"DYHC","Brockmoor and Pensnett","Dudley West","DYSH","Dudley","DY","Dudley","12925","5252",-2.133892,52.49864
+"84","DYHD",2,5,"DYHD","Kingswinford North and Wall Heath","Dudley West","DYSH","Dudley","DY","Dudley","12493","5214",-2.169953,52.504967
+"85","DYHE",2,6,"DYHE","Kingswinford South","Dudley West","DYSH","Dudley","DY","Dudley","12697","5216",-2.162374,52.492193
+"86","DYHF",5,8,"DYHF","Lye and Stourbridge North","Dudley West","DYSH","Dudley","DY","Dudley","12625","5270",-2.123658,52.459975
+"87","DYHG",3,8,"DYHG","Norton","Dudley West","DYSH","Dudley","DY","Dudley","11841","5017",-2.157287,52.442003
+"88","DYHH",4,8,"DYHH","Pedmore and Stourbridge East","Dudley West","DYSH","Dudley","DY","Dudley","12177","5145",-2.128582,52.441575
+"89","DYHJ",2,8,"DYHJ","Wollaston and Stourbridge Town","Dudley West","DYSH","Dudley","DY","Dudley","13128","5838",-2.158513,52.459805
+"90","DYHK",2,7,"DYHK","Wordsley","Dudley West","DYSH","Dudley","DY","Dudley","12598","5228",-2.158421,52.4818
+"91","SHAA",22,9,"SHAA","Bickenhill","Meriden","SHSA","Solihull","SH","Solihull","12342","5090",-1.717516,52.4289
+"92","SHAB",21,9,"SHAB","Birmingham International Airport","Meriden","SHSA","Solihull","SH","Solihull","0","0",-1.745137,52.453083
+"93","SHAC",18,11,"SHAC","Blythe","Meriden","SHSA","Solihull","SH","Solihull","13270","5454",-1.824392,52.380083
+"94","SHAD",20,7,"SHAD","Castle Bromwich","Meriden","SHSA","Solihull","SH","Solihull","11217","4708",-1.773193,52.50673
+"95","SHAE",22,7,"SHAE","Chelmsley Wood","Meriden","SHSA","Solihull","SH","Solihull","12553","5617",-1.732408,52.480306
+"96","SHAF",20,10,"SHAF","Dorridge and Hockley Heath","Meriden","SHSA","Solihull","SH","Solihull","11357","4476",-1.768475,52.371006
+"97","SHAH",21,8,"SHAH","Kingshurst and Fordbridge","Meriden","SHSA","Solihull","SH","Solihull","12682","5430",-1.751253,52.485085
+"98","SHAJ",21,10,"SHAJ","Knowle","Meriden","SHSA","Solihull","SH","Solihull","10159","4264",-1.726605,52.38217
+"99","SHAK",22,10,"SHAK","Meriden","Meriden","SHSA","Solihull","SH","Solihull","11795","4841",-1.644198,52.406114
+"100","SHAL",22,8,"SHAL","NEC","Meriden","SHSA","Solihull","SH","Solihull","0","0",-1.719023,52.453587
+"101","SHAM",21,7,"SHAM","Smith's Wood","Meriden","SHSA","Solihull","SH","Solihull","12446","5195",-1.747966,52.501472
+"102","SHBA",20,9,"SHBA","Elmdon","Solihull","SHSB","Solihull","SH","Solihull","12079","5163",-1.76804,52.438973
+"103","SHBB",18,8,"SHBB","Lyndon","Solihull","SHSB","Solihull","SH","Solihull","13293","5511",-1.794056,52.445494
+"104","SHBC",18,9,"SHBC","Olton","Solihull","SHSB","Solihull","SH","Solihull","12679","5281",-1.808818,52.431156
+"105","SHBD",17,10,"SHBD","Shirley East","Solihull","SHSB","Solihull","SH","Solihull","11462","4591",-1.817922,52.412736
+"106","SHBE",18,10,"SHBE","Shirley South","Solihull","SHSB","Solihull","SH","Solihull","12410","5190",-1.81667,52.39875
+"107","SHBF",15,11,"SHBF","Shirley West","Solihull","SHSB","Solihull","SH","Solihull","11943","5038",-1.844054,52.408183
+"108","SHBG",19,9,"SHBG","Silhill","Solihull","SHSB","Solihull","SH","Solihull","12008","5083",-1.779074,52.422096
+"109","SHBH",19,10,"SHBH","St Alphege","Solihull","SHSB","Solihull","SH","Solihull","12983","5125",-1.785057,52.406989
+"110","SWAK",11,4,"SWAK","Charlemont with Grove Vale","Sandwell North","SWSA","Sandwell","SW","Sandwell","12134","5049",-1.969572,52.543855
+"111","SWAL",10,4,"SWAL","Friar Park","Sandwell North","SWSA","Sandwell","SW","Sandwell","12542","4921",-1.993624,52.555263
+"112","SWAM",12,3,"SWAM","Great Barr with Yew Tree","Sandwell North","SWSA","Sandwell","SW","Sandwell","12531","4911",-1.947343,52.553886
+"113","SWAN",8,5,"SWAN","Great Bridge","Sandwell North","SWSA","Sandwell","SW","Sandwell","13152","5176",-2.039817,52.530785
+"114","SWAP",9,6,"SWAP","Greets Green and Lyng","Sandwell North","SWSA","Sandwell","SW","Sandwell","11815","4472",-2.010157,52.517133
+"115","SWAQ",10,5,"SWAQ","Hateley Heath","Sandwell North","SWSA","Sandwell","SW","Sandwell","14086","5347",-1.995874,52.537507
+"116","SWAR",12,4,"SWAR","Newton","Sandwell North","SWSA","Sandwell","SW","Sandwell","11567","4755",-1.947034,52.537869
+"117","SWAS",7,4,"SWAS","Princes End","Sandwell North","SWSA","Sandwell","SW","Sandwell","12846","5202",-2.057197,52.543846
+"118","SWAT",7,5,"SWAT","Tipton Green","Sandwell North","SWSA","Sandwell","SW","Sandwell","12887","5160",-2.064933,52.527628
+"119","SWAU",9,4,"SWAU","Wednesbury North","Sandwell North","SWSA","Sandwell","SW","Sandwell","12536","4834",-2.020641,52.558602
+"120","SWAV",9,5,"SWAV","Wednesbury South","Sandwell North","SWSA","Sandwell","SW","Sandwell","12573","5037",-2.021084,52.541701
+"121","SWAW",11,5,"SWAW","West Bromwich Central","Sandwell North","SWSA","Sandwell","SW","Sandwell","13317","5366",-1.979891,52.521498
+"122","SWBE",10,8,"SWBE","Abbey","Sandwell South","SWSB","Sandwell","SW","Sandwell","11752","5053",-1.978252,52.475067
+"123","SWBF",8,7,"SWBF","Blackheath","Sandwell South","SWSB","Sandwell","SW","Sandwell","12324","5140",-2.042233,52.478432
+"124","SWBG",10,7,"SWBG","Bristnall","Sandwell South","SWSB","Sandwell","SW","Sandwell","12122","4730",-1.998426,52.48274
+"125","SWBH",6,7,"SWBH","Cradley Heath and Old Hill","Sandwell South","SWSB","Sandwell","SW","Sandwell","13362","5666",-2.07107,52.469874
+"126","SWBJ",9,7,"SWBJ","Langley","Sandwell South","SWSB","Sandwell","SW","Sandwell","12615","5353",-2.021008,52.48699
+"127","SWBK",9,8,"SWBK","Old Warley","Sandwell South","SWSB","Sandwell","SW","Sandwell","11814","4908",-2.002006,52.469643
+"128","SWBL",8,6,"SWBL","Oldbury","Sandwell South","SWSB","Sandwell","SW","Sandwell","13618","5358",-2.027601,52.508115
+"129","SWBM",7,7,"SWBM","Rowley","Sandwell South","SWSB","Sandwell","SW","Sandwell","12233","4921",-2.054691,52.489357
+"130","SWBN",11,7,"SWBN","Smethwick","Sandwell South","SWSB","Sandwell","SW","Sandwell","13670","5192",-1.979861,52.489311
+"131","SWBP",11,6,"SWBP","Soho and Victoria","Sandwell South","SWSB","Sandwell","SW","Sandwell","15540","5367",-1.957179,52.49208
+"132","SWBQ",10,6,"SWBQ","St Paul's","Sandwell South","SWSB","Sandwell","SW","Sandwell","14453","4671",-1.982039,52.500966
+"133","SWBR",7,6,"SWBR","Tividale","Sandwell South","SWSB","Sandwell","SW","Sandwell","12575","4907",-2.046325,52.503311
+"134","WSFA",10,2,"WSFA","Birchills Leamore","Walsall Central","WSSF","Walsall","WS","Walsall","15163","6165",-2.003586,52.599934
+"135","WSFB",10,1,"WSFB","Blakenall","Walsall Central","WSSF","Walsall","WS","Walsall","13532","5054",-1.980787,52.606839
+"136","WSFC",9,0,"WSFC","Bloxwich East","Walsall Central","WSSF","Walsall","WS","Walsall","12198","5038",-1.995001,52.624473
+"137","WSFD",9,1,"WSFD","Bloxwich West","Walsall Central","WSSF","Walsall","WS","Walsall","13098","5636",-2.016541,52.621008
+"138","WSFE",11,3,"WSFE","Paddock","Walsall Central","WSSF","Walsall","WS","Walsall","12771","4721",-1.952731,52.573009
+"139","WSFF",10,3,"WSFF","Palfrey","Walsall Central","WSSF","Walsall","WS","Walsall","16532","5407",-1.978937,52.567109
+"140","WSFG",9,3,"WSFG","Pleck","Walsall Central","WSSF","Walsall","WS","Walsall","15090","5427",-2.003965,52.578995
+"141","WSGA",14,2,"WSGA","Aldridge Central and South","Walsall Outer","WSSG","Walsall","WS","Walsall","13935","6020",-1.915238,52.599585
+"142","WSGB",13,2,"WSGB","Aldridge North and Walsall Wood","Walsall Outer","WSSG","Walsall","WS","Walsall","13207","5532",-1.924306,52.629228
+"143","WSGC",11,1,"WSGC","Brownhills","Walsall Outer","WSSG","Walsall","WS","Walsall","12630","5157",-1.939658,52.648991
+"144","WSGD",10,0,"WSGD","Pelsall","Walsall Outer","WSSG","Walsall","WS","Walsall","11430","4831",-1.969727,52.630636
+"145","WSGE",13,3,"WSGE","Pheasey Park Farm","Walsall Outer","WSSG","Walsall","WS","Walsall","11245","4629",-1.921543,52.566949
+"146","WSGF",12,2,"WSGF","Rushall Shelfield","Walsall Outer","WSSG","Walsall","WS","Walsall","12045","5069",-1.950193,52.611342
+"147","WSGG",14,3,"WSGG","Streetly","Walsall Outer","WSSG","Walsall","WS","Walsall","13780","5641",-1.891697,52.577331
+"148","WSGH",9,2,"WSGH","Bentley and Darlaston North","Walsall Outer","WSSG","Walsall","WS","Walsall","13748","5240",-2.025082,52.580521
+"149","WSGJ",8,4,"WSGJ","Darlaston South","Walsall Outer","WSSG","Walsall","WS","Walsall","14078","5586",-2.044077,52.563845
+"150","WSGK",8,2,"WSGK","Short Heath","Walsall Outer","WSSG","Walsall","WS","Walsall","11425","4828",-2.036998,52.599818
+"151","WSGL",8,1,"WSGL","Willenhall North","Walsall Outer","WSSG","Walsall","WS","Walsall","12697","5080",-2.039974,52.612336
+"152","WSGM",8,3,"WSGM","Willenhall South","Walsall Outer","WSSG","Walsall","WS","Walsall","15818","6414",-2.052848,52.585581
+"153","WSHA",11,2,"WSHA","St Matthew's","Walsall St Matthew's","WSSH","Walsall","WS","Walsall","14917","6353",-1.968352,52.586653
+"154","WVKA",4,3,"WVKA","Wolverhampton City Centre","Wolverhampton City Centre","WVSK","Wolverhampton","WV","Wolverhampton","892","400",-2.128409,52.585069
+"155","WVLA",7,3,"WVLA","Bilston East","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","13379","5671",-2.06806,52.560176
+"156","WVLB",6,3,"WVLB","Bilston North","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12101","4774",-2.075747,52.574755
+"157","WVLC",3,4,"WVLC","Blakenhall","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12022","4109",-2.129013,52.566573
+"158","WVLD",4,1,"WVLD","Bushbury North","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","11816","5039",-2.11932,52.627823
+"159","WVLE",4,2,"WVLE","Bushbury South and Low Hill","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","13280","4915",-2.118983,52.60747
+"160","WVLF",5,3,"WVLF","East Park","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12523","5346",-2.095912,52.58294
+"161","WVLG",5,4,"WVLG","Ettingshall","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","13741","5362",-2.102723,52.567691
+"162","WVLH",6,2,"WVLH","Fallings Park","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12639","4975",-2.097914,52.614449
+"163","WVLJ",3,3,"WVLJ","Graiseley","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12284","5171",-2.146501,52.576244
+"164","WVLK",5,2,"WVLK","Heath Town","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","15285","6638",-2.106055,52.595862
+"165","WVLL",2,3,"WVLL","Merry Hill","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12189","5203",-2.170609,52.570575
+"166","WVLM",3,1,"WVLM","Oxley","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12716","5161",-2.145494,52.618435
+"167","WVLN",2,2,"WVLN","Park","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","11775","5184",-2.153107,52.588863
+"168","WVLP",2,4,"WVLP","Penn","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12718","4941",-2.154403,52.561805
+"169","WVLR",4,4,"WVLR","Spring Vale","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","11991","4945",-2.106923,52.554016
+"170","WVLS",3,2,"WVLS","St Peter's","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","12198","4524",-2.139193,52.599724
+"171","WVLT",1,2,"WVLT","Tettenhall Regis","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","11944","4859",-2.169987,52.604339
+"172","WVLW",1,3,"WVLW","Tettenhall Wightwick","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","11300","5139",-2.181212,52.586198
+"173","WVLX",7,1,"WVLX","Wednesfield North","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","11165","4937",-2.062393,52.613462
+"174","WVLY",7,2,"WVLY","Wednesfield South","Wolverhampton Outer","WVSL","Wolverhampton","WV","Wolverhampton","11498","4877",-2.075277,52.599178

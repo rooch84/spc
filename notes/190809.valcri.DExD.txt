@@ -1,0 +1,54 @@
+# COMMENTS
+
+Do we need "use them in their own workplace" here?
+Is this really a device?
+It seems more fundamental.
+Can we separate out something like: "ask them to test (or even 'evaluate') alternatives" and show ways that we do this - e.g.
+  * change position - drag and drop
+  * change parameters - sliders
+  * vary data - sliders
+  * split date - point and click
+  * ask direct questions - textbox
+I am not sure what the specific interactions are, but we should try to list these as above.
+
+
+I think this is a masterstroke!
+We are not making claims about them and they confused reviewers.
+And we keep getting stuck on the fact that we are using them to explain here, but did not use them with the analysts. This feels inconsistent.
+KILL THEM!
+
+Can we establish different forms of narrative that we used?
+I can see a few:
+ * simple to complex
+ * abstract to specific (these may be related or even the same thing)
+ * familiar to novel
+ * problem to solution
+Are there others?
+Do we try to do all of these concurrently (as they are not orthogonal)?
+I think we should document these and then relate back to them when introducing the specific DExDs below.
+I think we need to call them DExD dialogue devices and nail them in 3.2 and then use them elsewhere (e.g. sections 5 and 6.)
+
+
+
+ We don't actually know whether it as the DExDs or the broader context of relationships forged during an intense project that developed over a number of years. But this is not an unusual situation, and while we are unable to make strong claims about any guaranteed effectiveness of DExDs in shorter, less intense projects, our sense is that they have potential utility in a range of problem solving visualization design projects that involve busy remote analysts.
+
+ We need to be able to suggest that the DExDs resulted in the family - that we have ended up with an understanding the views need to be specialised and that we have some candidates that can achieve this. I think that the family is a result of the DExDs - can we argue this?
+
+ I think narrative strategies or \emph{DExD dialogue devices} need to be listed as a sub-claim in the introduction; documented more clearly in 3.2 and summarised / reclaimed and restated in the conclusion.
+
+
+-- ROUND 1 -- one week
+JD - conclusion
+JD - check the DExDs for devices
+JD - write up dialogue devices section, possibly ...
+   - dialogue devices : narrative structure -= familiar to unfamiliar;
+   - design alternatives : in they control in usage environment (drag & drop; slider)
+   - direct invitation: to compare and reflect
+RB - take out all references to and images of schematics
+RB - smooth in light of JD comments and changes in LaTeX
+JD - new abstract
+RB - new abstract
+RB - get OK from Chris (William)
+
+-- ROUND 2 -- one month?
+?? - smooth in light of dialogue devices

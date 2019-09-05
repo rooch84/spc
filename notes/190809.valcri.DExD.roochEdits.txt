@@ -1,0 +1,66 @@
+ROOCH EDITS (DONE)
+
+1. A simple SPC chart and efficient representations of geography
+   https://rooch84.github.io/spc/
+
+*.
+Change 'gapped approach' to 'tile map' ... use
+
+1.
+Make sure page titles are consistent with titles on pages
+
+- remove first opacity slider
+
+= reenforces
+> reinforces
+
+2. Representing signals geographically
+   https://rooch84.github.io/spc/
+
+= In the last chapter, we used colour to represent population. In this chapter we use colour to show signals that occur at the most recent data point (which we will refer to as 'today')
+> We have used colour to represent a quantity (the population of an area) a characteristic of a place - the NPU. Here we use colour to show signals that occur at the most recent data point (which we will refer to as 'today').
+
+= has be triggered
+= has been triggered
+
+= We can further increase detail by showing the type of signal that occurred 'today'.
+> We can add information about the TYPE of signal that occurred 'today' by varying the shape of symbols in the reporting areas in which signals occur.
+
+= has be triggered
+> has been triggered
+
+= When comparing the above two, the fist graphic remains more clear when rendered at a smaller size when compared to the icon version. This is demonstrated in the visualisations below. The colouring on the right is visible at the second smallest size, whereas the icons only remain clear until the third smallest size. However, neither are clear at the smallest size.
+> Let's compare these methods, and the extent to which they are useful, in maps of different sizes.  the fist graphic remains more clear when rendered at a smaller size when compared to the icon version. This is demonstrated in the visualisations below. The colouring on the right is visible at the second smallest size, whereas the icons only remain clear until the third smallest size. However, neither are clear at the smallest size.
+
+= simultaniously
+> simultaneously
+
+= A comparison of fill and icon styles at different sizes. While the icons convey more information, it's easier to interprit the filled version at smaller sizes
+> Using colour (left), and colour and shape (right) to show information about signals in each reporting area in maps of different sizes. While the icons in the maps on the right convey more information, it's hard to detect the colours from the varied shapes, and difficult to discern the shapes in maps of smaller size.
+
+= a tilted down or up line to signify a signal
+> a line tilted up (positive) or down (negative) to signify a signal
+
+= discreet
+> discrete
+
+= angle to the mean of the signal
+> using line angles for numeric information such as difference between most recent data point and its predecessor.
+
+= We can further enrich the chart by representing
+> We can add more information to the chart by representing
+
+= in the next chapter
+= on the next page
+
+3. Summarising processes geographically
+https://rooch84.github.io/spc/
+
+= each square shows a
+> each square contains a
+
+4. Combining representations
+https://rooch84.github.io/spc/
+
+5. Comparing multiple maps
+https://rooch84.github.io/spc/

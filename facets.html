@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VALCRI - DExDs for Statistical Process Control</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style/spc.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/spcmap.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/tufte.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/dexd.css" type="text/css"></link>
+
+	<script type="text/javascript" src="lib/d3_4_5_0.min.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/spc.js"></script>
+
+</head>
+<body>
+	<div class="loading">Loading ...</div>
+
+	<div class="spcMapFooter">
+		<input onclick="moveTodayBackward()" class="button spcMapFooterItem" type="button" value="backward"/>
+		<input onclick="moveTodayForward()" class="button spcMapFooterItem" type="button" value="forward"/>
+		<div class="spcMapFooterItem">Today is <span class="displayToday"></span></div>
+	</div>
+
+	<h2>Comparing Multiple Maps</h2>
+
+	<p><a href="index.html">Click here to go home</a></p>
+
+	<p>One objective of making the graphics in the neighbourhoods quite simple, is that we are able to shrink them down and make them small. This allows us create small tile maps that are still readable.
+		This in turn enables us to view and compare multiple maps simultaneously.
+		Here we show maps for different crime types concrently in ways that may help us compare geographic patterns.<p>
+
+		<p>Again, today is set to <span class="displayToday"></span> and you can move the date <input onclick="moveTodayBackward()" class="button" type="button" value="backward"/> and <input onclick="moveTodayForward()" class="button" type="button" value="forward"/> one month at a time using these grey buttons, or the buttons at the bottom.</p>
+
+		<p class="question">Try changing the date to see how crime patterns vary over time.</p>
+
+		<p>We can configure these sophisticated maps in multiple ways, but we'd like you to experiment to produce maps that combine information in ways that suit you.
+		In the graphics that follow we have have add a slider that allows you to vary the strength of colour used to show the NPUs - it's <i>opacity</i>.</p>
+
+		<p class="question">Use the slider to vary the strength of colour (opacity) used to show the NPUs.<br/>
+			What level works well for you?</br>
+			Is there a mid-point between NPU legibility and signal legibility that enables you to see both?</p>
+
+		<figure>
+			<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+			<span class="marginnote">
+				Multiple charts, each representing a crime type.<br/>
+				Signals are represented by the familiar signal shapes.<br/>
+				Click on a neighbourhood to see its SPC chart.<br/>
+				div>The date is <span class="displayToday"></span>.</div>
+				<div>
+					Opacity: <input class="opacitySlider" type="range" min="0" max="1" value="0.11" step="0.01" oninput="showValue('.opacityValue1', this.value); updateOpacities('.geoSpcFacet', this.value)"/>
+					<span class="opacityValue1">0.11</span>
+				</div>
+				<div class="spcByCrimeMeta"></div>
+				<div class="spcByCrime sideContainer" alt="An SPC chart"></div>
+			</span>
+			<div class="geoSpcFacet facet multiViewContainer geo" alt="An SPC chart"></div>
+		</figure>
+
+	 <p>Here we have the same maps, but rather than having a coloured shape we use cell colour to show where signals occur and the direction. These maps contain less information, but may be clearer to read, and we may be able to shring them down further to consider more information.</p>
+
+	 <p class="question">Are the maps still legible if we make them smaller?</p>
+
+		<figure>
+			<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+			<span class="marginnote">
+				Multiple charts, each representing crime type.<br/>
+				Signals are represented by fill colour.<br/>
+				Click on a neighbourhood to see its SPC chart.<br/>
+				<div>The date is <span class="displayToday"></span>.</div>
+				<div>
+					Opacity: <input class="opacitySlider" type="range" min="0" max="1" value="0.11" step="0.01" oninput="showValue('.opacityValue2', this.value); updateOpacities('.geoSpcFacetAbstract', this.value)"/>
+					<span class="opacityValue2">0.11</span>
+				</div>
+				<div class="spcByCrimeAbstractMeta"></div>
+				<div class="spcByCrimeAbstract sideContainer" alt="An SPC chart"></div>
+			</span>
+			<div class="geoSpcFacetAbstract facet multiViewContainer geo" alt="An SPC chart"></div>
+		</figure>
+
+		<p><hr/></p>
+
+		<p>This consideration of designs for <a href="facets.html">Comparing Multiple Maps</a> concludes our investigation into the redesign of SPC charts in a geographical context.</p>
+
+		<p><hr/></p>
+
+		<script>
+
+		// All crime
+		// All crime per type
+		// All crime per NPU
+		// All crime per NPU per crime type
+		// All crime per neighbourhood
+		// All crime per neighbourhood per type
+
+
+		var dataFile = "data/derived_data_2016.csv";
+		var smwgFile = "data/west-mids-smwg.csv";
+		var properties = {};
+		var data;
+		var tooltip;
+		var mainProperties = {"autoDetectProcesses" : false};
+
+		var mapList = ["geoSpcColourOnly", "geoSpcIcons", "geoSpcGlyphs"];
+
+		var minDate = d3v45.timeParse("%m-%Y")("08-2011");
+		var month = 07;//11;
+		var year = 2014;//2012;
+		var today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+		var autoDetectCap = today;
+		var mapData;
+		var selected = "";
+		var npuColours;
+
+		updateOpacities = function (c, v) {
+			d3v45.select(c).selectAll(".containerWrapper").each( function(d) {
+				 spcmap.updateChartOpacity("" + d3v45.select(this).select("div").attr("class").split(" ")[0], v);
+			});
+		}
+
+		showValue = function(c, v) {
+			d3v45.select(c).html(v);
+		}
+
+
+		moveTodayBackward = function() {
+			if (today > minDate) {
+				if (month > 1) {
+					month--;
+				} else {
+					month = 12;
+					year--;
+				}
+				recalculateSPC();
+			}
+		}
+
+		moveTodayForward = function() {
+			if (month < 12) {
+				month++;
+			} else {
+				month = 1;
+				year++;
+			}
+			recalculateSPC();
+		}
+
+		recalculateSPC = function() {
+			d3v45.select(".loading").classed("hidden", false);
+			today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+			d3v45.selectAll(".displayToday").html(displayToday());
+			initSPC();
+		}
+
+		displayToday = function() {
+			let s = "th";
+			if (d3v45.timeFormat("%_d")(today) == 1) {
+				s = "st";
+			} else if (d3v45.timeFormat("%_d")(today) == 2) {
+				s = "nd";
+			} if (d3v45.timeFormat("%_d")(today) == 3) {
+				s = "rd";
+			}
+			return d3v45.timeFormat("%_d" + s + " %b %Y")(today);
+		}
+
+		displayMeta = function(container, n, crime) {
+			d3v45.select("." + container).html(crime + "<br />" + n.Neighbourh + ", " + n.NPU + "<br />Population: " + n.pop2011);
+		}
+
+		getMapListWithoutMe = function(me) {
+			var tmpMapList = [];
+			for (let i of mapList) {
+				if (!(me == i)) {
+					tmpMapList.push(i);
+				}
+			}
+			return tmpMapList;
+		}
+
+		loadSPC = function (container) {
+			return function(d, e) {
+				selected = d;
+				for (let row of crimeTypes) {
+					if (row.key == e) {
+						for (let row2 of row.values) {
+							if (row2.key == d) {
+								displayChart(row2.values, "." + container, properties[d]);
+
+								for (let n of mapData) {
+									if (n.Neigh_code == row2.key) {
+										displayMeta(container + "Meta", n, e.split("_").join(" "));
+									}
+								}
+								break;
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+		window.onload = function() {
+			tooltip = spcmap.initalizeToolip('body');
+			initSMWG();
+			d3v45.selectAll(".displayToday").html(displayToday());
+		}
+
+		initSMWG = function() {
+			d3v45.csv(smwgFile, function(error, data) {
+				if (error)
+				throw error;
+				mapData = data;
+				npuColours = d3v45.scaleOrdinal()
+				.domain(d3v45.map(data, function(d){return d.NPU;}).keys())
+				.range(["#EB4551","#22919E","#EBC24F","#FF7C40","#B2D100","#C04B69","#00BDA6","#28556E"]);
+				initSPC();
+			});
+
+		}
+
+		initSPC = function() {
+
+
+
+			console.log("init");
+			d3v45.csv(dataFile, function(d) {
+				d.Count = +d.Count;
+				return d;
+			}, function(error, theData) {
+				if (error) throw error;
+
+				theData = theData.filter(function(d){ return spc.parseTime("%Y-%m")(d.Month) <= today; })
+
+				crimeTypes = d3v45.nest()
+				.key(function(d) { return d.CrimeType; })
+				.key(function(d) { return d.neighbourhood; })
+				.key(function(d) { return d.Month; })
+				.rollup(function(v) {
+					return d3v45.sum(v, function(d) {
+						return d.Count;
+					})
+				})
+				.entries(theData)
+
+				d3v45.select(".geoSpcFacet").html("");
+				d3v45.select(".geoSpcFacetAbstract").html("");
+				crimeTypes.forEach( function (data) {
+					//var wrapper = d3v45.select(".geoSpcFacet").
+					var smItem = d3v45.select(".geoSpcFacet").append("div").classed("smallMultipleItem", true).classed("threeCol", true);
+					smItem.append("div").html(data.key);
+					data.key = data.key.split(" ").join("_");
+
+					var wrapper = smItem.append("div").classed("containerWrapper", true)
+					wrapper.append("div").classed("geoSpcFacets_" + data.key, true).classed("container", true);
+
+					spcmap.drawSMWG(mapData, "geoSpcFacets_" + data.key, {
+						"tooltip" : tooltip,
+						"linkedViews" : getMapListWithoutMe("geoSpcFacets_" + data.key),
+						"callback" : loadSPC("spcByCrime"),
+						"colourScale" : npuColours,
+						"colourAttribute" : "NPU",
+						"offsetX" : 1,
+						"offsetY" : 0,
+						"superlabel" : data.key
+					});
+
+					smItem = d3v45.select(".geoSpcFacetAbstract").append("div").classed("smallMultipleItem", true).classed("fourCol", true);
+					smItem.append("div").html(data.key.split("_").join(" "));
+					data.key = data.key.split(" ").join("_");
+
+					wrapper = smItem.append("div").classed("containerWrapper", true)
+					wrapper.append("div").classed("geoSpcFacetAbstract_" + data.key, true).classed("container", true);
+
+					spcmap.drawSMWG(mapData, "geoSpcFacetAbstract_" + data.key, {
+						"tooltip" : tooltip,
+						"linkedViews" : getMapListWithoutMe("geoSpcFacetAbstract_" + data.key),
+						"callback" : loadSPC("spcByCrimeAbstract"),
+						"colourScale" : npuColours,
+						"colourAttribute" : "NPU",
+						"offsetX" : 1,
+						"offsetY" : 0,
+						"superlabel" : data.key
+					});
+
+					updateChartOpacity("geoSpcFacets_" + data.key, 0.11)
+					updateChartOpacity("geoSpcFacetAbstract_" + data.key, 0.11)
+
+
+
+
+					//data = d3v45.nest()
+					//.key(function(d) { return d.neighbourhood; })
+					//.key(function(d) { return d.Month; })
+					//.rollup(function(v) {
+					//return d3v45.sum(v, function(d) {
+					//return d.Count;
+					//})
+					//})
+					//.entries(theData);
+
+
+					var maxVal = 0;
+					var minVal = Number.MAX_SAFE_INTEGER;
+
+					data.values.forEach(function (d) {
+
+						d.values.forEach( function (d) {
+							d.Date = spc.parseTime("%Y-%m")(d.key);
+							d.Count = +d.value;
+						});
+
+						d.values.sort(function(a,b) {return a.Date-b.Date;});
+
+						//	console.log(today);
+						//	console.log(d);
+
+						// let i = 0;
+						// while(i < d.values.length && d.values[i].Date <= today) {
+						// 	console.log(i);
+						// 	i++;
+						// }
+
+
+						var mean = d3v45.mean(d.values, function(d1) { return d1.Count});
+						var sd = d3v45.deviation(d.values, function(d1) { return d1.Count});
+
+						if (mean + 3 * sd > maxVal) {
+							maxVal = mean + 3 * sd;
+						}
+						if (mean - 3 * sd < minVal) {
+							minVal = mean - 3 * sd;
+						}
+
+
+						spc.getSignals(d.values, properties[d.key] = {"autoDetectProcess" : true, "autoDetectUntil" : autoDetectCap});
+					});
+
+					data.values.forEach(function(d) {
+						//	console.log()
+						spcmap.addSignalsAsIcons("geoSpcFacets_" + data.key, d.key, properties[d.key], today);
+						spcmap.addSignalsAsColourOnly("geoSpcFacetAbstract_" + data.key, d.key, properties[d.key], today);
+					});
+				});
+
+				if (selected != "") {
+					loadSPC(selected);
+				}
+
+				console.log("finished");
+				d3v45.select(".loading").classed("hidden", true);
+			});
+		}
+
+
+		</script>
+	</body>
+	</html>

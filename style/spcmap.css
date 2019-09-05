@@ -1,0 +1,186 @@
+.lot {
+  fill: lightgray;
+  stroke: black;
+}
+
+.las {
+  /*fill: #BBB;
+  stroke: #fff;
+  stroke-width: 1px;*/
+}
+
+.hoverMe:hover {
+  opacity: 0.5;
+}
+
+.las--link {
+  fill: #DFDFDF;
+  opacity: 0.3;
+}
+
+.hidden {
+  display: none;
+}
+
+div.tooltip {
+  color: #222;
+  background-color: #fff;
+  opacity: 0.9;
+  padding: 0.3em;
+  position: fixed;
+  font-family: inherit;
+}
+
+div.tooltip p {
+  margin: 0px;
+  font-size: 1rem;
+  padding: 0px;
+
+}
+
+.spc_1 {
+  fill: red;
+}
+
+.spc_2 {
+  fill: green;
+}
+
+.d3Panel {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.negativeSignal {
+  fill: red;
+}
+
+.positiveSignal {
+  fill: green;
+}
+
+.button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background-color: #DDD;
+}
+.loading {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  font-style: italic;
+  font-size: 2.2rem;
+}
+
+.geo {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.valcriImg {
+  width: 30px;
+}
+
+.multiViewContainer {
+  display: flex;
+}
+
+.multiViewChild {
+ width: 100%;
+ margin: 0px 2px 0px 2px;
+}
+
+.legend {
+  height: 150px;
+  margin-top: 10px;
+}
+
+.sideContainer {
+  height: 200px;
+}
+
+.spcMapFooter {
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  background-color: #fffff8;
+  justify-content: flex-end;
+  z-index: 100;
+}
+
+.spcMapFooterItem {
+  align-self: center;
+  margin: 5px;
+}
+
+body {
+  margin-bottom: 30px;
+}
+
+.glyphNoSignal {
+  stroke-width: 1;
+}
+
+.smallMultiple {
+  width: 180px;
+  height: 73px;
+}
+
+.facet {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.containerWrapperDeep {
+  width: 100%;
+  /* whatever width you want */
+  display: inline-block;
+  position: relative;
+}
+
+.containerWrapperDeep:after{
+  padding-top: 55%;
+  /* 16:9 ratio */
+  display: block;
+  content: '';
+}
+
+.containerWrapper {
+  width: 100%;
+  /* whatever width you want */
+  display: inline-block;
+  position: relative;
+}
+
+.containerWrapper:after {
+  padding-top: 40.74%;
+  /* 16:9 ratio */
+  display: block;
+  content: '';
+}
+
+.reduced {
+  width: 60%;
+}
+
+.smallMultipleItem {
+}
+
+.threeCol {
+  flex-basis: 30%;
+}
+
+.fourCol {
+  flex-basis: 25%;
+}

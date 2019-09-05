@@ -1,0 +1,18 @@
+--- CONCLUSION --
+
+DExD is an approach
+enabled by emerging technologies
+fits in well with broader methods - DSM, agile
+
+Enables us to achieve MI and RS
+
+Compliments notebooks, but is different in that it focuses on establishing and addressing problems through visualization design and is explicit about design decisions in doing so.
+We have implemented some dialogue devices - there is scope for expanding and assessing these, and implementing others.
+
+Can be created in various ways, we provide some options.
+
+May lead to different designs in terms of family, sophistication, breadth.
+
+We offer some evidence to support these contentions based upon a long term study that has resulted in software installation in our collaborators' organization. DExD separation from study
+
+We call for this approach to be explored, enhanced, more fully (broadened, tested, etc.)

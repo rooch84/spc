@@ -1,0 +1,25 @@
+"","region","gridX","gridY","descriptio","timestamp","begin","end","altitudeMo","tessellate","extrude","visibility","drawOrder","icon","Neigh_code","Neighbourh","Sector","Sector_cod","NPU","NPU_code","LA","pop2011","HH2011","lon","lat"
+"1","DYGA",5,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGA","Belle Vale","Dudley East","DYSG","Dudley","DY","Dudley","13535","5842",-2.061153,52.455168
+"2","DYGB",4,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGB","Castle and Priory","Dudley East","DYSG","Dudley","DY","Dudley","14750","5511",-2.090149,52.520813
+"3","DYGC",4,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGC","Coseley East","Dudley East","DYSG","Dudley","DY","Dudley","12625","5267",-2.085214,52.543549
+"4","DYGD",3,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGD","Cradley and Wollescote","Dudley East","DYSG","Dudley","DY","Dudley","13122","5274",-2.097909,52.455422
+"5","DYGE",2,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGE","Gornal","Dudley East","DYSG","Dudley","DY","Dudley","13043","5731",-2.132291,52.520642
+"6","DYGF",6,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGF","Halesowen North","Dudley East","DYSG","Dudley","DY","Dudley","12252","5158",-2.032031,52.466733
+"7","DYGG",6,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGG","Halesowen South","Dudley East","DYSG","Dudley","DY","Dudley","12246","5134",-2.031285,52.44637
+"8","DYGH",4,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGH","Hayley Green and Cradley South","Dudley East","DYSG","Dudley","DY","Dudley","11792","4875",-2.076282,52.442975
+"9","DYGJ",3,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGJ","Netherton, Woodside and St Andrew's","Dudley East","DYSG","Dudley","DY","Dudley","14665","6041",-2.093121,52.492454
+"10","DYGK",4,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGK","Quarry Bank and Dudley Wood","Dudley East","DYSG","Dudley","DY","Dudley","13765","5501",-2.095612,52.476004
+"11","DYGL",2,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGL","Sedgley","Dudley East","DYSG","Dudley","DY","Dudley","11993","5043",-2.124442,52.544265
+"12","DYGM",3,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGM","St James's","Dudley East","DYSG","Dudley","DY","Dudley","13580","5874",-2.106028,52.509904
+"13","DYGN",4,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGN","St Thomas's","Dudley East","DYSG","Dudley","DY","Dudley","14453","5482",-2.0751,52.504356
+"14","DYGP",3,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYGP","Upper Gornal and Woodsetton","Dudley East","DYSG","Dudley","DY","Dudley","13275","5436",-2.104986,52.532879
+"15","DYHA",2,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHA","Amblecote","Dudley West","DYSH","Dudley","DY","Dudley","13341","5406",-2.136803,52.468605
+"16","DYHB",2,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHB","Brierley Hill","Dudley West","DYSH","Dudley","DY","Dudley","14008","6112",-2.130302,52.479242
+"17","DYHC",1,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHC","Brockmoor and Pensnett","Dudley West","DYSH","Dudley","DY","Dudley","12925","5252",-2.133892,52.49864
+"18","DYHD",0,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHD","Kingswinford North and Wall Heath","Dudley West","DYSH","Dudley","DY","Dudley","12493","5214",-2.169953,52.504967
+"19","DYHE",0,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHE","Kingswinford South","Dudley West","DYSH","Dudley","DY","Dudley","12697","5216",-2.162374,52.492193
+"20","DYHF",3,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHF","Lye and Stourbridge North","Dudley West","DYSH","Dudley","DY","Dudley","12625","5270",-2.123658,52.459975
+"21","DYHG",1,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHG","Norton","Dudley West","DYSH","Dudley","DY","Dudley","11841","5017",-2.157287,52.442003
+"22","DYHH",2,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHH","Pedmore and Stourbridge East","Dudley West","DYSH","Dudley","DY","Dudley","12177","5145",-2.128582,52.441575
+"23","DYHJ",1,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHJ","Wollaston and Stourbridge Town","Dudley West","DYSH","Dudley","DY","Dudley","13128","5838",-2.158513,52.459805
+"24","DYHK",1,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"DYHK","Wordsley","Dudley West","DYSH","Dudley","DY","Dudley","12598","5228",-2.158421,52.4818

@@ -1,0 +1,19 @@
+"","region","gridX","gridY","descriptio","timestamp","begin","end","altitudeMo","tessellate","extrude","visibility","drawOrder","icon","Neigh_code","Neighbourh","Sector","Sector_cod","NPU","NPU_code","LA","pop2011","HH2011","lon","lat"
+"1","CVGA",3,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVGA","St Michael's","Coventry City Centre","CVSG","Coventry","CV","Coventry","27987","10665",-1.504861,52.407917
+"2","CVHA",3,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVHA","Foleshill","Coventry North East","CVSH","Coventry","CV","Coventry","19943","6940",-1.497472,52.42831
+"3","CVHB",4,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVHB","Henley","Coventry North East","CVSH","Coventry","CV","Coventry","18317","7648",-1.448959,52.433882
+"4","CVHC",3,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVHC","Longford","Coventry North East","CVSH","Coventry","CV","Coventry","18292","7844",-1.478752,52.446251
+"5","CVHD",4,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVHD","Lower Stoke","Coventry North East","CVSH","Coventry","CV","Coventry","18361","7205",-1.473746,52.404406
+"6","CVHE",4,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVHE","Upper Stoke","Coventry North East","CVSH","Coventry","CV","Coventry","18464","7571",-1.477092,52.420319
+"7","CVHF",5,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVHF","Wyken","Coventry North East","CVSH","Coventry","CV","Coventry","16953","6881",-1.448566,52.412579
+"8","CVJA",1,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJA","Bablake","Coventry South and North West","CVSJ","Coventry","CV","Coventry","15755","6535",-1.56524,52.439354
+"9","CVJB",5,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJB","Binley and Willenhall","Coventry South and North West","CVSJ","Coventry","CV","Coventry","16874","7495",-1.45704,52.391762
+"10","CVJC",3,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJC","Cheylesmore","Coventry South and North West","CVSJ","Coventry","CV","Coventry","15977","7191",-1.492137,52.387227
+"11","CVJD",2,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJD","Earlsdon","Coventry South and North West","CVSJ","Coventry","CV","Coventry","15371","6351",-1.532004,52.393917
+"12","CVJE",2,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJE","Holbrook","Coventry South and North West","CVSJ","Coventry","CV","Coventry","17080","6637",-1.513487,52.443526
+"13","CVJF",2,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJF","Radford","Coventry South and North West","CVSJ","Coventry","CV","Coventry","18799","7766",-1.517413,52.424351
+"14","CVJG",1,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJG","Sherbourne","Coventry South and North West","CVSJ","Coventry","CV","Coventry","12988","5319",-1.539205,52.417576
+"15","CVJH",2,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJH","Wainbody","Coventry South and North West","CVSJ","Coventry","CV","Coventry","14910","4668",-1.542004,52.379917
+"16","CVJJ",0,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJJ","Westwood","Coventry South and North West","CVSJ","Coventry","CV","Coventry","18198","7255",-1.579306,52.396183
+"17","CVJK",1,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJK","Whoberley","Coventry South and North West","CVSJ","Coventry","CV","Coventry","15875","7022",-1.54954,52.410874
+"18","CVJL",0,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"CVJL","Woodlands","Coventry South and North West","CVSJ","Coventry","CV","Coventry","16815","7599",-1.583602,52.412196

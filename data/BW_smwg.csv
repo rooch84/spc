@@ -1,0 +1,29 @@
+"","region","gridX","gridY","descriptio","timestamp","begin","end","altitudeMo","tessellate","extrude","visibility","drawOrder","icon","Neigh_code","Neighbourh","Sector","Sector_cod","NPU","NPU_code","LA","pop2011","HH2011","lon","lat"
+"1","BWFA",5,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWFA","Birmingham City Centre","Birmingham City Centre","BWSF","Birmingham West","BW","Birmingham","2326","1368",-1.89782,52.480739
+"2","BWFB",5,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWFB","Eastside","Birmingham City Centre","BWSF","Birmingham West","BW","Birmingham","3296","612",-1.884499,52.480184
+"3","BWFC",4,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWFC","Southside","Birmingham City Centre","BWSF","Birmingham West","BW","Birmingham","1740","1047",-1.895845,52.473767
+"4","BWFD",4,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWFD","Westside","Birmingham City Centre","BWSF","Birmingham West","BW","Birmingham","2210","1342",-1.911164,52.476975
+"5","BWGA",1,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWGA","Bartley Green","Edgbaston","BWSG","Birmingham West","BW","Birmingham","25046","10757",-1.993501,52.435342
+"6","BWGB",3,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWGB","Edgbaston","Edgbaston","BWSG","Birmingham West","BW","Birmingham","24510","9110",-1.927303,52.4615
+"7","BWGC",2,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWGC","Harborne","Edgbaston","BWSG","Birmingham West","BW","Birmingham","23216","10048",-1.958945,52.461025
+"8","BWGD",1,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWGD","Quinton","Edgbaston","BWSG","Birmingham West","BW","Birmingham","24079","9979",-1.988424,52.457849
+"9","BWHA",5,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWHA","Aston","Ladywood East","BWSH","Birmingham West","BW","Birmingham","32003","9579",-1.896557,52.50034
+"10","BWHB",5,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWHB","Highgate","Ladywood East","BWSH","Birmingham West","BW","Birmingham","5103","2185",-1.888667,52.468929
+"11","BWHC",6,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWHC","Nechells","Ladywood East","BWSH","Birmingham West","BW","Birmingham","10689","4147",-1.869917,52.497283
+"12","BWHD",6,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWHD","Small Heath","Ladywood East","BWSH","Birmingham West","BW","Birmingham","13415","4401",-1.863394,52.475556
+"13","BWJA",4,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWJA","Jewellery Quarter","Ladywood West","BWSJ","Birmingham West","BW","Birmingham","7154","4073",-1.911693,52.485154
+"14","BWJB",3,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWJB","Ladywood","Ladywood West","BWSJ","Birmingham West","BW","Birmingham","18505","8737",-1.930119,52.479507
+"15","BWJC",3,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWJC","Soho Road","Ladywood West","BWSJ","Birmingham West","BW","Birmingham","12978","4541",-1.937656,52.500803
+"16","BWJD",2,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWJD","Winson Green","Ladywood West","BWSJ","Birmingham West","BW","Birmingham","17233","5721",-1.936995,52.488746
+"17","BWKA",3,6,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWKA","Kings Norton","Northfield","BWSK","Birmingham West","BW","Birmingham","24226","10216",-1.935912,52.40273
+"18","BWKB",1,6,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWKB","Longbridge","Northfield","BWSK","Birmingham West","BW","Birmingham","25128","10664",-2.001147,52.398041
+"19","BWKC",2,6,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWKC","Northfield","Northfield","BWSK","Birmingham West","BW","Birmingham","26025","11521",-1.967304,52.403094
+"20","BWKD",1,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWKD","Weoley","Northfield","BWSK","Birmingham West","BW","Birmingham","25573","10635",-1.968555,52.427108
+"21","BWLA",3,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWLA","Handsworth Wood","Perry Barr","BWSL","Birmingham West","BW","Birmingham","27642","9223",-1.940813,52.520024
+"22","BWLB",4,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWLB","Lozells and East Handsworth","Perry Barr","BWSL","Birmingham West","BW","Birmingham","31511","9714",-1.917869,52.507554
+"23","BWLC",5,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWLC","Oscott","Perry Barr","BWSL","Birmingham West","BW","Birmingham","24833","10334",-1.894444,52.542608
+"24","BWLD",4,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWLD","Perry Barr","Perry Barr","BWSL","Birmingham West","BW","Birmingham","23750","8823",-1.902475,52.526068
+"25","BWMA",6,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWMA","Billesley","Selly Oak","BWSM","Birmingham West","BW","Birmingham","26429","10702",-1.871596,52.417009
+"26","BWMB",2,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWMB","Bournville","Selly Oak","BWSM","Birmingham West","BW","Birmingham","26053","11296",-1.933664,52.424627
+"27","BWMC",4,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWMC","Brandwood","Selly Oak","BWSM","Birmingham West","BW","Birmingham","25802","10977",-1.89981,52.4162
+"28","BWMD",3,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BWMD","Selly Oak","Selly Oak","BWSM","Birmingham West","BW","Birmingham","25999","8241",-1.931446,52.440875

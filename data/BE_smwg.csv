@@ -1,0 +1,21 @@
+"","region","gridX","gridY","descriptio","timestamp","begin","end","altitudeMo","tessellate","extrude","visibility","drawOrder","icon","Neigh_code","Neighbourh","Sector","Sector_cod","NPU","NPU_code","LA","pop2011","HH2011","lon","lat"
+"1","BEDA",3,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEDA","Erdington","Erdington","BESD","Birmingham East","BE","Birmingham","22894","10272",-1.835631,52.528781
+"2","BEDB",1,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEDB","Kingstanding","Erdington","BESD","Birmingham East","BE","Birmingham","25480","10183",-1.870648,52.542689
+"3","BEDC",2,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEDC","Stockland Green","Erdington","BESD","Birmingham East","BE","Birmingham","24495","10389",-1.857955,52.521398
+"4","BEDD",4,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEDD","Tyburn","Erdington","BESD","Birmingham East","BE","Birmingham","25002","10202",-1.810553,52.516165
+"5","BEEA",2,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEEA","Hall Green","Hall Green","BESE","Birmingham East","BE","Birmingham","26106","9402",-1.844972,52.427096
+"6","BEEB",0,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEEB","Moseley and Kings Heath","Hall Green","BESE","Birmingham East","BE","Birmingham","25916","11113",-1.890995,52.441446
+"7","BEEC",1,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEEC","Sparkbrook","Hall Green","BESE","Birmingham East","BE","Birmingham","32166","9233",-1.880745,52.460187
+"8","BEED",1,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEED","Springfield","Hall Green","BESE","Birmingham East","BE","Birmingham","31283","9211",-1.859955,52.444235
+"9","BEFA",2,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEFA","Bordesley Green","Hodge Hill","BESF","Birmingham East","BE","Birmingham","34108","9295",-1.837045,52.475553
+"10","BEFB",3,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEFB","Hodge Hill","Hodge Hill","BESF","Birmingham East","BE","Birmingham","27652","9548",-1.817919,52.499588
+"11","BEFC",5,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEFC","Shard End","Hodge Hill","BESF","Birmingham East","BE","Birmingham","26686","11555",-1.775379,52.488465
+"12","BEFD",2,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEFD","Washwood Heath","Hodge Hill","BESF","Birmingham East","BE","Birmingham","33268","9091",-1.844185,52.489686
+"13","BEGA",2,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEGA","Sutton Four Oaks","Sutton Coldfield","BESG","Birmingham East","BE","Birmingham","23970","10134",-1.8407,52.583527
+"14","BEGB",4,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEGB","Sutton New Hall","Sutton Coldfield","BESG","Birmingham East","BE","Birmingham","22011","9272",-1.780078,52.538652
+"15","BEGC",3,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEGC","Sutton Trinity","Sutton Coldfield","BESG","Birmingham East","BE","Birmingham","25561","10771",-1.803743,52.569625
+"16","BEGD",2,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEGD","Sutton Vesey","Sutton Coldfield","BESG","Birmingham East","BE","Birmingham","23349","9621",-1.848468,52.551407
+"17","BEHA",3,5,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEHA","Acocks Green","Yardley","BESH","Birmingham East","BE","Birmingham","29056","11318",-1.826534,52.443755
+"18","BEHB",4,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEHB","Sheldon","Yardley","BESH","Birmingham East","BE","Birmingham","21530","9091",-1.778275,52.461779
+"19","BEHC",3,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEHC","South Yardley","Yardley","BESH","Birmingham East","BE","Birmingham","29912","11023",-1.828558,52.462043
+"20","BEHD",4,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"BEHD","Stechford and Yardley North","Yardley","BESH","Birmingham East","BE","Birmingham","26119","10013",-1.799919,52.478277

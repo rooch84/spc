@@ -1,0 +1,20 @@
+"","region","gridX","gridY","descriptio","timestamp","begin","end","altitudeMo","tessellate","extrude","visibility","drawOrder","icon","Neigh_code","Neighbourh","Sector","Sector_cod","NPU","NPU_code","LA","pop2011","HH2011","lon","lat"
+"1","SHAA",5,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAA","Bickenhill","Meriden","SHSA","Solihull","SH","Solihull","12342","5090",-1.717516,52.4289
+"2","SHAB",4,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAB","Birmingham International Airport","Meriden","SHSA","Solihull","SH","Solihull","0","0",-1.745137,52.453083
+"3","SHAC",2,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAC","Blythe","Meriden","SHSA","Solihull","SH","Solihull","13270","5454",-1.824392,52.380083
+"4","SHAD",2,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAD","Castle Bromwich","Meriden","SHSA","Solihull","SH","Solihull","11217","4708",-1.773193,52.50673
+"5","SHAE",5,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAE","Chelmsley Wood","Meriden","SHSA","Solihull","SH","Solihull","12553","5617",-1.732408,52.480306
+"6","SHAF",3,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAF","Dorridge and Hockley Heath","Meriden","SHSA","Solihull","SH","Solihull","11357","4476",-1.768475,52.371006
+"7","SHAH",2,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAH","Kingshurst and Fordbridge","Meriden","SHSA","Solihull","SH","Solihull","12682","5430",-1.751253,52.485085
+"8","SHAJ",4,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAJ","Knowle","Meriden","SHSA","Solihull","SH","Solihull","10159","4264",-1.726605,52.38217
+"9","SHAK",6,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAK","Meriden","Meriden","SHSA","Solihull","SH","Solihull","11795","4841",-1.644198,52.406114
+"10","SHAL",6,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAL","NEC","Meriden","SHSA","Solihull","SH","Solihull","0","0",-1.719023,52.453587
+"11","SHAM",3,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHAM","Smith's Wood","Meriden","SHSA","Solihull","SH","Solihull","12446","5195",-1.747966,52.501472
+"12","SHBA",3,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHBA","Elmdon","Solihull","SHSB","Solihull","SH","Solihull","12079","5163",-1.76804,52.438973
+"13","SHBB",2,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHBB","Lyndon","Solihull","SHSB","Solihull","SH","Solihull","13293","5511",-1.794056,52.445494
+"14","SHBC",1,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHBC","Olton","Solihull","SHSB","Solihull","SH","Solihull","12679","5281",-1.808818,52.431156
+"15","SHBD",1,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHBD","Shirley East","Solihull","SHSB","Solihull","SH","Solihull","11462","4591",-1.817922,52.412736
+"16","SHBE",2,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHBE","Shirley South","Solihull","SHSB","Solihull","SH","Solihull","12410","5190",-1.81667,52.39875
+"17","SHBF",0,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHBF","Shirley West","Solihull","SHSB","Solihull","SH","Solihull","11943","5038",-1.844054,52.408183
+"18","SHBG",4,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHBG","Silhill","Solihull","SHSB","Solihull","SH","Solihull","12008","5083",-1.779074,52.422096
+"19","SHBH",3,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SHBH","St Alphege","Solihull","SHSB","Solihull","SH","Solihull","12983","5125",-1.785057,52.406989

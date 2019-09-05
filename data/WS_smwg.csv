@@ -1,0 +1,21 @@
+"","region","gridX","gridY","descriptio","timestamp","begin","end","altitudeMo","tessellate","extrude","visibility","drawOrder","icon","Neigh_code","Neighbourh","Sector","Sector_cod","NPU","NPU_code","LA","pop2011","HH2011","lon","lat"
+"1","WSFA",2,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSFA","Birchills Leamore","Walsall Central","WSSF","Walsall","WS","Walsall","15163","6165",-2.003586,52.599934
+"2","WSFB",3,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSFB","Blakenall","Walsall Central","WSSF","Walsall","WS","Walsall","13532","5054",-1.980787,52.606839
+"3","WSFC",3,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSFC","Bloxwich East","Walsall Central","WSSF","Walsall","WS","Walsall","12198","5038",-1.995001,52.624473
+"4","WSFD",2,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSFD","Bloxwich West","Walsall Central","WSSF","Walsall","WS","Walsall","13098","5636",-2.016541,52.621008
+"5","WSFE",5,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSFE","Paddock","Walsall Central","WSSF","Walsall","WS","Walsall","12771","4721",-1.952731,52.573009
+"6","WSFF",4,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSFF","Palfrey","Walsall Central","WSSF","Walsall","WS","Walsall","16532","5407",-1.978937,52.567109
+"7","WSFG",3,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSFG","Pleck","Walsall Central","WSSF","Walsall","WS","Walsall","15090","5427",-2.003965,52.578995
+"8","WSGA",6,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGA","Aldridge Central and South","Walsall Outer","WSSG","Walsall","WS","Walsall","13935","6020",-1.915238,52.599585
+"9","WSGB",5,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGB","Aldridge North and Walsall Wood","Walsall Outer","WSSG","Walsall","WS","Walsall","13207","5532",-1.924306,52.629228
+"10","WSGC",4,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGC","Brownhills","Walsall Outer","WSSG","Walsall","WS","Walsall","12630","5157",-1.939658,52.648991
+"11","WSGD",4,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGD","Pelsall","Walsall Outer","WSSG","Walsall","WS","Walsall","11430","4831",-1.969727,52.630636
+"12","WSGE",5,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGE","Pheasey Park Farm","Walsall Outer","WSSG","Walsall","WS","Walsall","11245","4629",-1.921543,52.566949
+"13","WSGF",5,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGF","Rushall Shelfield","Walsall Outer","WSSG","Walsall","WS","Walsall","12045","5069",-1.950193,52.611342
+"14","WSGG",6,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGG","Streetly","Walsall Outer","WSSG","Walsall","WS","Walsall","13780","5641",-1.891697,52.577331
+"15","WSGH",2,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGH","Bentley and Darlaston North","Walsall Outer","WSSG","Walsall","WS","Walsall","13748","5240",-2.025082,52.580521
+"16","WSGJ",1,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGJ","Darlaston South","Walsall Outer","WSSG","Walsall","WS","Walsall","14078","5586",-2.044077,52.563845
+"17","WSGK",1,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGK","Short Heath","Walsall Outer","WSSG","Walsall","WS","Walsall","11425","4828",-2.036998,52.599818
+"18","WSGL",0,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGL","Willenhall North","Walsall Outer","WSSG","Walsall","WS","Walsall","12697","5080",-2.039974,52.612336
+"19","WSGM",0,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSGM","Willenhall South","Walsall Outer","WSSG","Walsall","WS","Walsall","15818","6414",-2.052848,52.585581
+"20","WSHA",4,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"WSHA","St Matthew's","Walsall St Matthew's","WSSH","Walsall","WS","Walsall","14917","6353",-1.968352,52.586653

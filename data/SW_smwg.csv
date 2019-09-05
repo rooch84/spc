@@ -1,0 +1,25 @@
+"","region","gridX","gridY","descriptio","timestamp","begin","end","altitudeMo","tessellate","extrude","visibility","drawOrder","icon","Neigh_code","Neighbourh","Sector","Sector_cod","NPU","NPU_code","LA","pop2011","HH2011","lon","lat"
+"1","SWAK",5,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAK","Charlemont with Grove Vale","Sandwell North","SWSA","Sandwell","SW","Sandwell","12134","5049",-1.969572,52.543855
+"2","SWAL",4,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAL","Friar Park","Sandwell North","SWSA","Sandwell","SW","Sandwell","12542","4921",-1.993624,52.555263
+"3","SWAM",5,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAM","Great Barr with Yew Tree","Sandwell North","SWSA","Sandwell","SW","Sandwell","12531","4911",-1.947343,52.553886
+"4","SWAN",2,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAN","Great Bridge","Sandwell North","SWSA","Sandwell","SW","Sandwell","13152","5176",-2.039817,52.530785
+"5","SWAP",3,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAP","Greets Green and Lyng","Sandwell North","SWSA","Sandwell","SW","Sandwell","11815","4472",-2.010157,52.517133
+"6","SWAQ",4,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAQ","Hateley Heath","Sandwell North","SWSA","Sandwell","SW","Sandwell","14086","5347",-1.995874,52.537507
+"7","SWAR",6,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAR","Newton","Sandwell North","SWSA","Sandwell","SW","Sandwell","11567","4755",-1.947034,52.537869
+"8","SWAS",2,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAS","Princes End","Sandwell North","SWSA","Sandwell","SW","Sandwell","12846","5202",-2.057197,52.543846
+"9","SWAT",1,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAT","Tipton Green","Sandwell North","SWSA","Sandwell","SW","Sandwell","12887","5160",-2.064933,52.527628
+"10","SWAU",3,0,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAU","Wednesbury North","Sandwell North","SWSA","Sandwell","SW","Sandwell","12536","4834",-2.020641,52.558602
+"11","SWAV",3,1,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAV","Wednesbury South","Sandwell North","SWSA","Sandwell","SW","Sandwell","12573","5037",-2.021084,52.541701
+"12","SWAW",5,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWAW","West Bromwich Central","Sandwell North","SWSA","Sandwell","SW","Sandwell","13317","5366",-1.979891,52.521498
+"13","SWBE",4,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBE","Abbey","Sandwell South","SWSB","Sandwell","SW","Sandwell","11752","5053",-1.978252,52.475067
+"14","SWBF",1,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBF","Blackheath","Sandwell South","SWSB","Sandwell","SW","Sandwell","12324","5140",-2.042233,52.478432
+"15","SWBG",3,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBG","Bristnall","Sandwell South","SWSB","Sandwell","SW","Sandwell","12122","4730",-1.998426,52.48274
+"16","SWBH",0,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBH","Cradley Heath and Old Hill","Sandwell South","SWSB","Sandwell","SW","Sandwell","13362","5666",-2.07107,52.469874
+"17","SWBJ",2,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBJ","Langley","Sandwell South","SWSB","Sandwell","SW","Sandwell","12615","5353",-2.021008,52.48699
+"18","SWBK",3,4,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBK","Old Warley","Sandwell South","SWSB","Sandwell","SW","Sandwell","11814","4908",-2.002006,52.469643
+"19","SWBL",2,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBL","Oldbury","Sandwell South","SWSB","Sandwell","SW","Sandwell","13618","5358",-2.027601,52.508115
+"20","SWBM",1,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBM","Rowley","Sandwell South","SWSB","Sandwell","SW","Sandwell","12233","4921",-2.054691,52.489357
+"21","SWBN",4,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBN","Smethwick","Sandwell South","SWSB","Sandwell","SW","Sandwell","13670","5192",-1.979861,52.489311
+"22","SWBP",5,3,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBP","Soho and Victoria","Sandwell South","SWSB","Sandwell","SW","Sandwell","15540","5367",-1.957179,52.49208
+"23","SWBQ",4,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBQ","St Paul's","Sandwell South","SWSB","Sandwell","SW","Sandwell","14453","4671",-1.982039,52.500966
+"24","SWBR",1,2,NA,NA,NA,NA,"clampToGround",1,1,1,NA,NA,"SWBR","Tividale","Sandwell South","SWSB","Sandwell","SW","Sandwell","12575","4907",-2.046325,52.503311

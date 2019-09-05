@@ -1,0 +1,64 @@
+#DIALOGUE DEVICES
+
+NARRATIVE FOCUS
+
+Notes used to come jp with concepts for S3.1
+
+1. familiarity
+2. information density / design complexity / novelty
+3. information density / comparison
+4. information density / design complexity
+5. information density
+
+// 5 pages, linear narrative as we scroll through pages with imagery and descriptions, plus explanations in the right margin.
+// linear progression through levels of complexity within and between pages
+
+METHODS
+  Scrolling narrative
+  Interactive graphics
+  LAYOUT with RHS
+    - keys to interaction
+    - linked graphics providing detail on demand
+  Instructions and buttons (hover, click)
+  Buttons in text
+  Tasks & Challenges "Try to find Winson Green and Selly Oak"
+    rearrange - drag and drop
+  Reinforcing terms 'less salient'
+  Specific requests : "If so, please can you capture and send a screenshot of your arrangement?"
+
+Open and closed questions :
+  Does this breakaway from traditional representations work for you?
+  Of the two ... which would you say you were most comfortable with?
+  * note that we don't do this on page 2!
+
+---
+
+IDEAS
+
+Save image, save positions
+Text feedback
+Annotations
+Instrumentation (recording)
+
+-- EXAMPLES FROM PAGES --
+
+  1. A simple SPC chart and efficient representations of geography
+   https://rooch84.github.io/spc/
+
+  Narrative scroll
+   1. familiarity
+   2. information density / design complexity / novelty
+
+  Interactive graphics
+  LAYOUT with RHS
+    - keys to interaction
+    - linked graphics providing detail on demand
+  Instructions and buttons (hover, click)
+  Buttons in text
+  Tasks & Challenges "Try to find Winson Green and Selly Oak"
+    rearrange - drag and drop
+
+Open and closed questions :
+  Does this breakaway from traditional representations work for you?
+  Of the two ... which would you say you were most comfortable with?
+  * note that we don't do this on page 2!
