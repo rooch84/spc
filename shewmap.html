@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html style="overflow: hidden">
+<head>
+	<title>VALCRI - Statistical Process Control</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style/spc.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/spcmap.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/main.css" type="text/css"></link>
+
+	<script type="text/javascript" src="lib/d3_4_5_0.min.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/spc.js"></script>
+
+</head>
+<body style="margin: 0; width: 100%; height: 100%">
+		<div class="containerWrapper" >
+			<div class="geoSpcOverload3 container geo" alt="A Shewmap chart"></div>
+			<div class="spcOverload3 overlappingContainer" alt="An SPC chart"></div>
+		</div>
+
+	<script>
+
+	var dataFile = "data/derived_data_2016.csv";
+	var smwgFile = "data/west-mids-smwg.csv";
+	var properties = {};
+	var data;
+	var tooltip;
+	var mainProperties = {"autoDetectProcesses" : false};
+
+	var mapList = ["geoSpcColourOnly", "geoSpcIcons", "geoSpcGlyphs"];
+
+	var minDate = d3v45.timeParse("%m-%Y")("08-2011");
+	var month = 07;//11;
+	var year = 2014;//2012;
+	var today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+	var autoDetectCap = today;
+  month = 06;//11;
+  year = 2016;//2012;
+  today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+
+	var mapData;
+	var selected = "";
+
+	var npuColours;
+
+	moveTodayBackward = function() {
+		if (today > minDate) {
+			if (month > 1) {
+				month--;
+			} else {
+				month = 12;
+				year--;
+			}
+			recalculateSPC();
+		}
+	}
+
+	moveTodayForward = function() {
+		if (month < 12) {
+			month++;
+		} else {
+			month = 1;
+			year++;
+		}
+		recalculateSPC();
+	}
+
+	recalculateSPC = function() {
+
+		d3v45.selectAll(".geoSpcOverload3").each( function(d,i) {
+			d3v45.select(this).selectAll("g").select("g").html("");
+		});
+
+		today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+		d3v45.selectAll(".displayToday").html(displayToday());
+		initSPC();
+	}
+
+	displayToday = function() {
+		let s = "th";
+		if (d3v45.timeFormat("%_d")(today) == 1) {
+			s = "st";
+		} else if (d3v45.timeFormat("%_d")(today) == 2) {
+			s = "nd";
+		} if (d3v45.timeFormat("%_d")(today) == 3) {
+			s = "rd";
+		}
+		return d3v45.timeFormat("%_d" + s + " %b %Y")(today);
+	}
+
+	displayMeta = function(container, n) {
+		d3v45.select("." + container).html(n.Neighbourh + ", " + n.NPU + "<br />Population: " + n.pop2011);
+	}
+
+	getMapListWithoutMe = function(me) {
+		var tmpMapList = [];
+		for (let i of mapList) {
+			if (!(me == i)) {
+				tmpMapList.push(i);
+			}
+		}
+		return tmpMapList;
+	}
+
+	loadSPC = function (container) {
+		return function(d) {
+			selected = d;
+			for (let row of data) {
+				if (row.key == d) {
+					displayChart(row.values, "." + container, properties[d]);
+					for (let n of mapData) {
+						if (n.Neigh_code == row.key) {
+							displayMeta(container + "Meta", n);
+						}
+					}
+					break;
+				}
+			}
+		}
+	}
+
+	window.onload = function() {
+		tooltip = spcmap.initalizeToolip('body');
+		initSMWG();
+		d3v45.selectAll(".displayToday").html(displayToday());
+	}
+
+	initSMWG = function() {
+		d3v45.csv(smwgFile, function(error, data) {
+			if (error)
+			throw error;
+			mapData = data;
+
+
+			npuColours = d3v45.scaleOrdinal()
+			.domain(d3v45.map(data, function(d){return d.NPU;}).keys())
+			.range(["#197F8E", "#B33355", "#02B395",  "#A3CD00", "#FF6529",  "#1E425C", "#E62A3D", "#FFBA00"]);
+
+
+			spcmap.drawSMWG(data, "geoSpcOverload3", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("geoSpcOverload3"),
+				"callback" : loadSPC("spcOverload3"),
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			spcmap.updateChartOpacity("geoSpcOverload3", 0.1);
+
+			initSPC();
+		});
+
+	}
+
+	initSPC = function() {
+		d3v45.csv(dataFile, function(d) {
+			d.Count = +d.Count;
+			return d;
+		}, function(error, theData) {
+			if (error) throw error;
+
+			data = d3v45.nest()
+			.key(function(d) { return d.neighbourhood; })
+			.key(function(d) { return d.Month; })
+			.rollup(function(v) {
+				return d3v45.sum(v, function(d) {
+					return d.Count;
+				})
+			})
+			.entries(theData);
+
+			var maxVal = 0;
+			var minVal = Number.MAX_SAFE_INTEGER;
+			data.forEach(function(d) {
+
+
+				d.values.forEach( function (d) {
+					d.Date = spc.parseTime("%Y-%m")(d.key);
+					d.Count = +d.value;
+				});
+
+				d.values.sort(function(a,b) {return a.Date-b.Date;});
+
+
+				let i = 0;
+				while(d.values[i].Date <= today) {
+					i++;
+				}
+
+				d.values.splice(i, d.values.length);
+
+				var mean = d3v45.mean(d.values, function(d1) { return d1.Count});
+				var sd = d3v45.deviation(d.values, function(d1) { return d1.Count});
+
+				if (mean + 3 * sd > maxVal) {
+					maxVal = mean + 3 * sd;
+				}
+				if (mean - 3 * sd < minVal) {
+					minVal = mean - 3 * sd;
+				}
+
+
+				spc.getSignals(d.values, properties[d.key] = {"autoDetectProcess" : true, "autoDetectUntil" : autoDetectCap});
+
+			});
+
+			data.forEach(function(d) {
+			spcmap.addSignalsAsIcons("geoSpcOverload3", d.key, properties[d.key], today, 0.9, 0.13, "#FFF");
+				spcmap.processesAsBackgroundShade("geoSpcOverload3", d.key, properties[d.key], d.values, minVal, maxVal,function() {return "rgba(220,220,220,0.9)"},"", margin = 0, strokeWidth = 0.3, stroke = "#FFFFF8", meanLine = false, "#AAA");
+				spcmap.addSignalsAsGlyphsAngleAsMean("geoSpcOverload3", d.key, properties[d.key], today, d.values, true, "#AAA");
+				spcmap.addSignalsAsTrendChannel("geoSpcOverload3", d.key, properties[d.key], d.values, 0.13);
+
+			});
+
+			if (selected != "") {
+				loadSPC(selected);
+			}
+
+		});
+	}
+
+
+	</script>
+</body>
+</html>

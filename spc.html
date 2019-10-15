@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VALCRI - Statistical Process Control</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style/spc.css" type="text/css"></link>
+
+	<script type="text/javascript" src="lib/d3_4_5_0.min.js"></script>
+	<script type="text/javascript" src="js/spc.js"></script>
+
+</head>
+<body style="margin: 0px;">
+	<div class="spc" style="width: 100%; height: 100%;" alt="An SPC chart"></div>
+
+	<script>
+
+	var dataFile = "data/derived_data_2016.csv";
+	var properties = {"autoDetectProcesses" : false};
+
+	window.onload = function() {
+
+		d3v45.csv(dataFile, function(d) {
+			d.Count = +d.Count;
+			return d;
+		}, function(error, rawData) {
+			if (error) throw error;
+			data = d3v45.nest()
+			.key(function(d) { return d.Month; })
+			.rollup(function(v) {
+				return d3v45.sum(v, function(d) {
+					return d.Count;
+				})
+			})
+			.entries(rawData);
+
+			data.forEach(function(d) {
+				d.Date = spc.parseTime("%Y-%m")(d.key);
+				d.Count = +d.value;
+			});
+			spc.displayChart(data, ".spc", properties);
+		});
+	}
+
+	window.onresize = function () {
+		spc.resizeChart(".spc", properties);
+	}
+	</script>
+</body>
+</html>
