@@ -36,19 +36,19 @@
 }
 
 .spc__underSignal_fill {
-  fill: #22919E;
+  fill: #1373ae;
 }
 
 .spc__overSignal_fill {
-  fill: #EB4551;
+  fill: #c80926;
 }
 
 .spc__underSignal_stroke {
-  stroke: #22919E;
+  stroke: #1373ae;
 }
 
 .spc__overSignal_stroke {
-  stroke: #EB4551;
+  stroke: #c80926;
 }
 
 body, html {
