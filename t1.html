@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VALCRI - DExDs for Statistical Process Control</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style/spc.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/spcmap.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/tufte.css" type="text/css"></link>
+	<link rel="stylesheet" href="style/dexd.css" type="text/css"></link>
+
+	<script type="text/javascript" src="lib/d3_4_5_0.min.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/spc.js"></script>
+
+</head>
+<body>
+	<div class="loading">Loading ...</div>
+
+	<div class="spcMapFooter">
+		<input onclick="moveTodayBackward()" class="button spcMapFooterItem" type="button" value="backward"/>
+		<input onclick="moveTodayForward()" class="button spcMapFooterItem" type="button" value="forward"/>
+		<div class="spcMapFooterItem">Today is <span class="displayToday"></span></div>
+	</div>
+
+	<h2>TVCG - Fig 5 - T1 Speculative Exploration</h2>
+	<!--h2>TVCG - Fig 5 - T2 Morning Scanning</h2-->
+
+	<!--p><a href="index.html">Click here to go home</a></p-->
+
+	<!--p>Previously, we have investigated how to represent single signals, signal history and process history over neighbourhoods in their geographic context.
+	Here we look at combining these views into a single graphic.
+	Firstly, we can place the signal icon on top of process view.</p-->
+
+<!-- Fig 1 -->
+	<!--figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing both signal and process information for each neighbourhood.<br/>
+			Click on a neighbourhood to see its SPC chart.<br/>
+			<div>The date is <span class="displayToday"></span>.</div>
+			<div class="spcOverload1"></div>
+			<div class="spcOverload1 sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcOverload1 container geo" alt="An SPC chart"></div>
+		</div>
+	</figure-->
+
+	<!--p>Further to this, we can add the mark indicating the mean of the data point or signal.
+		We adjust the opacity to allow the glyphs to be seen on top of the processes and signals.</p-->
+
+<!-- Fig 2 -->
+	<!--figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing both signal and process information for each neighbourhood, as well as a mark showing the mean of either the last data point or the signal.<br/>
+			Click on a neighbourhood to see its SPC chart.<br/>
+			<div>The date is <span class="displayToday"></span>.</div>
+			<div class="spcOverload2Meta"></div>
+			<div class="spcOverload2 sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcOverload2 container geo" alt="An SPC chart"></div>
+		</div>
+	</figure-->
+
+	<!--p>At this point, each tile requires more display space for it to be easily interpreted, so we can try enlarging the image.<br/>Clicking on a chart opens it in the margin above.</p-->
+
+<!-- Fig 3 -->
+	<figure class="fullwidth">
+		<div class="containerWrapper" >
+			<div class="geoSpcOverload2 container geo" alt="An SPC chart"></div>
+		</div>
+	</figure>
+
+	<!--p>Since we see the direction of the signal (positive or negative) is encoded in the colour of the mark, we could rem ove the colour from the shapes that inform us about signal type.
+		This potentially reduces clutter.</p-->
+
+<!-- Fig 4 -->
+	<!--figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing both signal and process information for each neighbourhood, as well as a mark showing the mean of either the last data point or the signal.
+			The shapes showing signal type are now colourless gaps - giving better visual differentiation from the angled lines.<br/>
+			Click on a neighbourhood to see its SPC chart.<br/>
+			<div>The date is <span class="displayToday"></span>.</div>
+			<div class="spcOverload2bMeta"></div>
+			<div class="spcOverload2b sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcOverload2b container geo" alt="An SPC chart"></div>
+		</div>
+	</figure-->
+
+	<!--p>Once again we enlarge the map to see the detail.</p-->
+
+<!-- Fig 5 -->
+	<!--figure class="fullwidth">
+		<div class="containerWrapper" >
+			<div class="geoSpcOverload2b container geo" alt="An SPC chart"></div>
+		</div>
+	</figure-->
+
+	<!--p>Now that we have removed the coloured shapes, we can try adding the trend channels on the top and bottom of each neighbourhood, showing historic positive and negative signals.</p-->
+
+<!-- Fig 6 -->
+	<!--figure>
+		<label for="mn-exports-imports" class="margin-toggle"></label><input type="checkbox" id="mn-exports-imports" class="margin-toggle">
+		<span class="marginnote">
+			A tile map showing both signal and process information for each neighbourhood, as well as a mark showing the mean of either the last data point or the signal, and with trend channels top and bottom.<br/>
+			Click on a neighbourhood to see its SPC chart.<br/>
+			 <div>The date is <span class="displayToday"></span>.</div>
+			<div class="spcOverload3Meta"></div>
+			<div class="spcOverload3 sideContainer" alt="An SPC chart"></div>
+		</span>
+		<div class="containerWrapper" >
+			<div class="geoSpcOverload3 container geo" alt="An SPC chart"></div>
+		</div>
+	</figure-->
+
+	<!--p>Again, we enlarge the image for a clearer view.</p-->
+
+<!-- Fig 7 -->
+	<!--figure class="fullwidth">
+		<div class="containerWrapper" >
+			<div class="geoSpcOverload3 container geo" alt="An SPC chart"></div>
+		</div>
+	</figure-->
+
+	<!--p><hr/></p-->
+
+	<!--p>This page investigated how we can fit all the summary information regarding an SPC chart of a neighbourhood into a small area by <a href="overloading.html">Combining Multiple Representations</a>.</p-->
+
+	<!--p>Next we consider designs for <a href="facets">Comparing Multiple Maps</a> when we show maps of different characteristics concurrently.</p-->
+
+	<!--p><hr/></p-->
+
+	<script>
+
+	var dataFile = "data/derived_data_2016.csv";
+	var smwgFile = "data/west-mids-smwg.csv";
+	var properties = {};
+	var data;
+	var tooltip;
+	var mainProperties = {"autoDetectProcesses" : false};
+
+	var mapList = ["geoSpcColourOnly", "geoSpcIcons", "geoSpcGlyphs"];
+
+	var minDate = d3v45.timeParse("%m-%Y")("08-2011");
+	var month = 05;//11;
+	var year = 2015;//2012;
+	var today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+	var autoDetectCap = today;
+
+	var mapData;
+	var selected = "";
+
+	var npuColours;
+
+	moveTodayBackward = function() {
+		if (today > minDate) {
+			if (month > 1) {
+				month--;
+			} else {
+				month = 12;
+				year--;
+			}
+			recalculateSPC();
+		}
+	}
+
+	moveTodayForward = function() {
+		if (month < 12) {
+			month++;
+		} else {
+			month = 1;
+			year++;
+		}
+		recalculateSPC();
+	}
+
+	recalculateSPC = function() {
+		d3v45.selectAll(".geoSpcOverload1").each( function(d,i) {
+			d3v45.select(this).selectAll(".las").classed("spc__underSignal_fill", false);
+		});
+		d3v45.selectAll(".geoSpcOverload2").each( function(d,i) {
+			d3v45.select(this).selectAll(".las").classed("spc__underSignal_fill", false);
+		});
+		d3v45.selectAll(".geoSpcOverload1").each( function(d,i) {
+			d3v45.select(this).selectAll("g").select("g").html("");
+		});
+		d3v45.selectAll(".geoSpcOverload2").each( function(d,i) {
+			d3v45.select(this).selectAll("g").select("g").html("");
+		});
+		d3v45.selectAll(".geoSpcOverload2b").each( function(d,i) {
+			d3v45.select(this).selectAll("g").select("g").html("");
+		});
+		d3v45.selectAll(".geoSpcOverload3").each( function(d,i) {
+			d3v45.select(this).selectAll("g").select("g").html("");
+		});
+		d3v45.selectAll(".geoSpcOverload3b").each( function(d,i) {
+			d3v45.select(this).selectAll("g").select("g").html("");
+		});
+		d3v45.select(".loading").classed("hidden", false);
+		today = d3v45.timeParse("%m-%Y")(month + "-" + year);
+		d3v45.selectAll(".displayToday").html(displayToday());
+		initSPC();
+	}
+
+	displayToday = function() {
+		let s = "th";
+		if (d3v45.timeFormat("%_d")(today) == 1) {
+			s = "st";
+		} else if (d3v45.timeFormat("%_d")(today) == 2) {
+			s = "nd";
+		} if (d3v45.timeFormat("%_d")(today) == 3) {
+			s = "rd";
+		}
+		return d3v45.timeFormat("%_d" + s + " %b %Y")(today);
+	}
+
+	displayMeta = function(container, n) {
+		d3v45.select("." + container).html(n.Neighbourh + ", " + n.NPU + "<br />Population: " + n.pop2011);
+	}
+
+	getMapListWithoutMe = function(me) {
+		var tmpMapList = [];
+		for (let i of mapList) {
+			if (!(me == i)) {
+				tmpMapList.push(i);
+			}
+		}
+		return tmpMapList;
+	}
+
+	loadSPC = function (container) {
+		return function(d) {
+			selected = d;
+			for (let row of data) {
+				if (row.key == d) {
+					displayChart(row.values, "." + container, properties[d]);
+					for (let n of mapData) {
+						if (n.Neigh_code == row.key) {
+							displayMeta(container + "Meta", n);
+						}
+					}
+					break;
+				}
+			}
+		}
+	}
+
+	window.onload = function() {
+		tooltip = spcmap.initalizeToolip('body');
+		initSMWG();
+		d3v45.selectAll(".displayToday").html(displayToday());
+	}
+
+	initSMWG = function() {
+		d3v45.csv(smwgFile, function(error, data) {
+			if (error)
+			throw error;
+			mapData = data;
+
+
+			npuColours = d3v45.scaleOrdinal()
+			.domain(d3v45.map(data, function(d){return d.NPU;}).keys())
+			.range(["#EB4551","#22919E","#EBC24F","#FF7C40","#B2D100","#C04B69","#00BDA6","#28556E"]);
+
+			spcmap.drawSMWG(data, "geoSpcOverload1", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("geoSpcOverload1"),
+				"callback" : loadSPC("spcOverload1"),
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			spcmap.drawSMWG(data, "geoSpcOverload2", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("geoSpcOverload2"),
+				"callback" : loadSPC("spcOverload2"),
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			spcmap.drawSMWG(data, "geoSpcOverload2b", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("geoSpcOverload2b"),
+				"callback" : loadSPC("spcOverload2b"),
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			spcmap.drawSMWG(data, "geoSpcOverload3", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("geoSpcOverload3"),
+				"callback" : loadSPC("spcOverload3"),
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			spcmap.drawSMWG(data, "geoSpcOverload3b", {
+				"tooltip" : tooltip,
+				"linkedViews" : getMapListWithoutMe("geoSpcOverload3b"),
+				"callback" : loadSPC("spcOverload3b"),
+				"colourScale" : npuColours,
+				"colourAttribute" : "NPU",
+				"offsetX" : 1,
+				"offsetY" : 0
+			});
+
+			spcmap.updateChartOpacity("geoSpcOverload1", 0.1);
+			spcmap.updateChartOpacity("geoSpcOverload2", 0.1);
+			spcmap.updateChartOpacity("geoSpcOverload2b", 0.1);
+			spcmap.updateChartOpacity("geoSpcOverload3", 0.1);
+			spcmap.updateChartOpacity("geoSpcOverload3b", 0.1);
+
+
+
+			initSPC();
+		});
+
+	}
+
+	initSPC = function() {
+		console.log("init");
+		d3v45.csv(dataFile, function(d) {
+			d.Count = +d.Count;
+			return d;
+		}, function(error, theData) {
+			if (error) throw error;
+
+			data = d3v45.nest()
+			.key(function(d) { return d.neighbourhood; })
+			.key(function(d) { return d.Month; })
+			.rollup(function(v) {
+				return d3v45.sum(v, function(d) {
+					return d.Count;
+				})
+			})
+			.entries(theData);
+
+			var maxVal = 0;
+			var minVal = Number.MAX_SAFE_INTEGER;
+			data.forEach(function(d) {
+
+
+				d.values.forEach( function (d) {
+					d.Date = spc.parseTime("%Y-%m")(d.key);
+					d.Count = +d.value;
+				});
+
+				d.values.sort(function(a,b) {return a.Date-b.Date;});
+
+
+				let i = 0;
+				while(d.values[i].Date <= today) {
+					i++;
+				}
+
+				d.values.splice(i, d.values.length);
+
+				var mean = d3v45.mean(d.values, function(d1) { return d1.Count});
+				var sd = d3v45.deviation(d.values, function(d1) { return d1.Count});
+
+				if (mean + 3 * sd > maxVal) {
+					maxVal = mean + 3 * sd;
+				}
+				if (mean - 3 * sd < minVal) {
+					minVal = mean - 3 * sd;
+				}
+
+
+				spc.getSignals(d.values, properties[d.key] = {"autoDetectProcess" : true, "autoDetectUntil" : autoDetectCap});
+
+			});
+
+			data.forEach(function(d) {
+				spcmap.addSignalsAsIcons("geoSpcOverload1", d.key, properties[d.key], today, 0.6);
+				spcmap.processesAsBackgroundShade("geoSpcOverload1", d.key, properties[d.key], d.values, minVal, maxVal, function() {return "rgba(150,150,150,0.7)"},"", margin = 0, strokeWidth = 0.3, stroke = "#FFFFFf", meanLine = false, "#666");
+
+				spcmap.addSignalsAsIcons("geoSpcOverload2", d.key, properties[d.key], today, 0.4);
+				spcmap.processesAsBackgroundShade("geoSpcOverload2", d.key, properties[d.key], d.values, minVal, maxVal, function() {return "rgba(200,200,200,0.9)"},"", margin = 0, strokeWidth = 0.3, stroke = "#FFFFFf", meanLine = false, "#AAA");
+				spcmap.addSignalsAsGlyphsAngleAsMean("geoSpcOverload2", d.key, properties[d.key], today, d.values, true, "#AAA");
+
+				spcmap.addSignalsAsIcons("geoSpcOverload2b", d.key, properties[d.key], today, 0.9, 0, "#FFF");
+				spcmap.processesAsBackgroundShade("geoSpcOverload2b", d.key, properties[d.key], d.values, minVal, maxVal, function() {return "rgba(220,220,220,0.9)"},"", margin = 0, strokeWidth = 0.3, stroke = "#FFFFFf", meanLine = false, "#AAA");
+				spcmap.addSignalsAsGlyphsAngleAsMean("geoSpcOverload2b", d.key, properties[d.key], today, d.values, true, "#AAA");
+
+
+				spcmap.addSignalsAsIcons("geoSpcOverload3", d.key, properties[d.key], today, 0.9, 0.13, "#FFF");
+				spcmap.processesAsBackgroundShade("geoSpcOverload3", d.key, properties[d.key], d.values, minVal, maxVal,function() {return "rgba(220,220,220,0.9)"},"", margin = 0, strokeWidth = 0.3, stroke = "#FFFFF8", meanLine = false, "#AAA");
+				spcmap.addSignalsAsGlyphsAngleAsMean("geoSpcOverload3", d.key, properties[d.key], today, d.values, true, "#AAA");
+				spcmap.addSignalsAsTrendChannel("geoSpcOverload3", d.key, properties[d.key], d.values, 0.13);
+
+
+				//spcmap.addSignalsAsGlyphsAngleAsMean("geoSpcGlyphsAngleAsMean", d.key, properties[d.key], today, d.values, false);
+				//spcmap.addSignalsAsGlyphsAngleAsMean("geoSpcGlyphsAngleAsMeanWidthAsCount", d.key, properties[d.key], today, d.values, true);
+				//spcmap.addSignalsAsTemporalGrid("geoSpcTrendGrid", d.key, properties[d.key], d.values);
+
+			});
+
+			if (selected != "") {
+				loadSPC(selected);
+			}
+
+			console.log("finished");
+			d3v45.select(".loading").classed("hidden", true);
+		});
+	}
+
+
+	</script>
+</body>
+</html>
